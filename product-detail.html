@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediLife - Pharmacy and Health care</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/product-detail.css">
+  <link rel="stylesheet" href="styles/product-page.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <section class="header">
+    <div class="container">
+      <div id="top-page">
+        <img src="img/logo.png" style="margin-left: 50px;">
+        <h1 id="com-name">MediLife HealthCare</h1>
+
+        <div id="menu-bar">
+          <ul>
+            <li><a class="mnbar-item active" onclick="selectMenuItem(this)">Trang chủ</a></li>
+            <li><a class="mnbar-item" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
+
+            <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
+            <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+            <div style="height: 80px; width: 180px; float: right;">
+              <button class="small-btn">
+                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+              </button>
+              <button class="small-btn">
+                <img src="img/notification.png" style="height: 20px;">
+              </button>
+              <button class="small-btn">
+                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+              </button>
+            </div>
+
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="bg-white main"
+    style="margin-top: 70px; background-color: #F0F2F5; height: 610px; font-family: 'Gabarito', sans-serif;;">
+    <div class="container" style="width: 1340px; height: 100%;">
+      <div class="detail-left">
+        <img src="img/medicine/detailpic.jpg" id="detailpic">
+        <div style="height: 130px;">
+          <img class="other-pic" src="img/medicine/morepic1.jpg">
+          <img class="other-pic" src="img/medicine/morepic2.jpg">
+          <img class="other-pic" src="img/medicine/morepic3.jpg">
+        </div>
+      </div>
+      <div class="detail-right">
+        <h2 class="title-h2" id="med-name">Dung Dịch nhỏ mắt Vrohto Mineral Tear (Chai 13ml)</h2>
+        <div id="detail-info" style="width: 475px; height: 435px; float: left;">
+          <div id="product-price">
+            <p class="ProductPrice_price">58.000 đ</p>
+            <div>
+              <div>Giá đã bao gồm Thuế.</div>
+              <div>Phí vận chuyển và các chi phí khác (nếu có) sẽ được thể hiện khi đặt hàng.</div>
+              <p>Mua hàng và tích lũy từ 50 xu vàng.</p>
+            </div>
+          </div>
+          <div id="product-name">Dung Dịch nhỏ mắt ohto Mineral Tear bổ sung
+            khoáng chất và nước mắt nhân tạo giúp giữ ẩm, làm dịu mắt khô. Phục hồi và tạo sự thoải mái cho mắt mỏi, mắt
+            kích ứng nhẹ, mắt khó chịu do đeo kính áp tròng, mắt mờ (do tiết dịch).</div>
+          <div id="quantity" style="margin-top: 20px;">
+            <input class="round-btn" type="button" value="-" onclick="dec('numtxt','total')">
+            <input id="numtxt" type="text" value="1">
+            <input class="round-btn" type="button" value="+" onclick="inc('numtxt','total')">
+
+          </div>
+          <div style="height: 45px; margin-top: 40px;">
+            <button id="buy-now">Mua ngay</button>
+            <button id="btn-addToCart">Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+        <div id="deliver-info" style="width: 330px; height: 435px; float: right;">
+          <div id="deli-text">
+            <h2 class="title-h2-sec">Các hình thức giao hàng</h2>
+            <p>Freeship cho đơn hàng từ 300.000đ</p>
+          </div>
+          <div>
+            <div class="service-block">
+              <div class="featured-block d-flex justify-content-center align-items-center">
+                <a href="donate.html" style="text-decoration: none;">
+                  <img src="img/service1.png" class="featured-block-image img-fluid" alt="">
+
+                  <p>Tư vấn chuyên gia</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="service-block">
+              <div class="featured-block d-flex justify-content-center align-items-center">
+                <a href="donate.html" style="text-decoration: none;">
+                  <img src="img/service2.png" class="featured-block-image img-fluid" alt="">
+
+                  <p>Thuốc tốt giá rẻ</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="service-block">
+              <div class="featured-block">
+                <a href="donate.html" style="text-decoration: none;">
+                  <img src="img/service3.png" class="featured-block-image img-fluid" alt="">
+
+                  <p>Thông tin <br> sức khỏe</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white main"
+    style="margin-top: 50px; background-color: #F0F2F5; height: max-content; font-family: 'Gabarito', sans-serif;;">
+    <div class="container" style="width: 1340px; padding-left: 10px; ">
+      <div style="padding-left: 22px;">
+        <div id="nav-info">
+          <ul>
+            <li class="d-active"> Thông tin sản phẩm </li>
+            <li> Thương hiệu </li>
+
+          </ul>
+        </div>
+        <div id="detail-info">
+          <h2 class="title-h2-sec">Thành phần</h2>
+          <p>
+            Sodium Chloride 63,7 mg, Sodium Bicarbonate 6,5 mg, Potassium Chloride 3,9 mg,
+            Calcium Chloride Hydrate 0,65 mg, Sodium Chondroitin Sulfate 65,0 mg,
+            Hypromellose 1,3 mg, Boric Acid, Sodium Borate, Sodium Hyaluronate, Polysorbate 80,
+            Polyoxyethylene Polyoxypropylene Glycol, Disodium Edetate Hydrate, Polyhexamethylene
+            Biguanide, Nước tinh khiết.
+          </p>
+          <h2 class="title-h2-sec">Công dụng</h2>
+          <p>
+            Giảm khô mắt, dưỡng ẩm mắt
+
+            <br>Bổ sung nước mắt nhân tạo và khoáng chất, giúp giữ ẩm, làm dịu mắt khô.
+
+            <br>Phục hồi và tạo sự thoải mái cho mắt mỏi, mắt kích ứng nhẹ, mắt khó chịu do đeo kính áp tròng, mắt mờ
+            (do tiết dịch).
+          </p>
+          <h2 class="title-h2-sec">Cách sử dụng</h2>
+          <p>
+            Nhỏ vào mắt mỗi lần 1-2 giọt
+
+            <br>Có thể nhỏ nhiều lần trong ngày tùy vào tình trạng khô mắt, mỏi mắt và khó chịu của mắt.
+
+            <br>Có thể sử dụng cho người không đeo kính áp tròng, đang đeo hoặc sau khi tháo kính áp tròng
+          </p>
+          <h2 class="title-h2-sec">Lưu ý</h2>
+          <p>
+            Chú ý trước khi dùng:
+
+            <br>- Chỉ dùng để nhỏ mắt.
+
+            <br>- Không để mi mắt chạm vào miệng lọ để tránh nhiễm trùng hoặc làm vẩn đục dung dịch do các chất tiết
+            hoặc mầm vi sinh vật. Không sử dụng khi dung dịch bị vẩn đục.
+
+            <br>- Vặn chặt nắp lọ sau khi dùng.
+
+            <br>- Để xa tầm tay trẻ em.
+
+            <br>- Không đựng dung dịch nhỏ mắt vào chai lọ khác để tránh nhầm lẫn hoặc làm giảm chất lượng.
+
+            <br>- Không dùng chung dung dịch nhỏ mắt với người khác để tránh lây nhiễm.
+
+            <br>- Một vài hoạt chất có thể kết tinh ở miệng lọ do điều kiện bảo quản. Hãy lau miệng lọ bằng gạc sạch
+            trước khi dùng.
+
+            <br>- Trẻ em sử dụng dưới sự hướng dẫn của người lớn.
+          </p>
+          <h2 class="title-h2-sec">Thận trọng</h2>
+          <p>
+            Hỏi ý kiến bác sĩ hoặc dược sĩ trong các trường hợp sau:
+
+            <br>- Có tiền căn dị ứng với dung dịch nhỏ mắt.
+
+            <br>- Tăng nhãn áp.
+
+            <br>- Nếu xuất hiện các triệu chứng như sung huyết, sưng, ngứa mắt, hãy ngưng sử dụng và hỏi ý kiến bác sĩ
+            hoặc dược sĩ.
+
+            Bảo quản: Bảo quản nơi khô mát (dưới 30 độ C), tránh ánh nắng trực tiếp
+          </p>
+          <h2 class="title-h2-sec">Bảo quản</h2>
+          <p>Bảo quản nơi khô mát (dưới 30 độ C), tránh ánh nắng trực tiếp</p>
+          <h2 class="title-h2-sec">Công ty chịu trách nhiệm về SP</h2>
+          <p>Công ty TNHH Rohto - Mentholatum (Việt Nam)</p>
+          <h2 class="title-h2-sec">Thương hiệu</h2>
+          <p>V.Rohto</p>
+          <h2 class="title-h2-sec">Nơi sản xuất</h2>
+          <p>Việt Nam</p>
+          <h2 class="title-h2-sec">Số Giấy công bố</h2>
+          <p>220000038/PCBB-BD</p>
+          <p style="font-style: italic;">Sản phẩm này không phải là thuốc, không có tác dụng thay thế thuốc chữa bệnh.
+          </p>
+          <p style="font-style: italic;">Để xa tầm tay trẻ em. Đọc kỹ hướng dẫn sử dụng trước khi dùng.</p>
+
+        </div>
+      </div>
+      <div class="menu-row" id="row1" style="width: 100%;">
+        <div class="cates">
+          <h2 class="title-cate">Sản phẩm liên quan</h2>
+        </div>
+
+
+        <div class="product-card col-3 col-s-6">
+          <button class="sale">
+            -30%
+          </button>
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+      </div>
+      <div class="menu-row" id="row1" style="width: 100%;">
+        <div class="cates">
+          <h2 class="title-cate">Cùng thương hiệu</h2>
+        </div>
+
+
+        <div class="product-card col-3 col-s-6">
+          <button class="sale">
+            -30%
+          </button>
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="js/jquery-3.6.4.min.js" type="text/Javascript"></script>
+  <script>
+    $(document).ready(function () {
+
+      $("#btn-addToCart").click(function () {
+
+        var cartAmount = Number(sessionStorage.getItem("cartAmount"));
+        //alert(cartAmount);
+        if (cartAmount != null)
+          cartAmount += 1;
+        else
+          cartAmount = 1;
+        sessionStorage.setItem("cartAmount", cartAmount);
+
+
+        var pImg = $(this).parent().parent().find(".detail-left").find("#detailpic").attr("src");
+        var pName = $(this).parent().parent().find("#product-name").text();
+        var pPrice = $(this).parent().parent().find("#product-price").find(".ProductPrice_price").text();
+        var pNum = $(this).parent().parent().find("#quantity").find("#numtxt").val();
+        //var pTotal = $(this).parent().find("#quan").find("#total").text();
+        // var pTotal = (pNum * parseInt(pPrice.substring(0, pPrice.length - 4))).toString();
+
+        var product = {
+          "img": pImg,
+          "name": pName,
+          "price": pPrice,
+          "num": pNum,
+          //"total": pTotal
+        };
+        alert("Đã thêm hàng vào giỏ." + '\n' + pName + '\n' + pPrice + '\n' + pNum + '\n' + pImg);
+        alert(pImg + " " + pName + " " + pPrice + " " + pNum + " " + pTotal);
+        var cart = sessionStorage.getItem("cart");
+        var cartProducts = "";
+        if (cart != null) {
+          cartProducts = cart + "," + JSON.stringify(product);
+        } else
+          cartProducts = JSON.stringify(product);
+        sessionStorage.setItem("cart", cartProducts);
+        alert(cartProducts);
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

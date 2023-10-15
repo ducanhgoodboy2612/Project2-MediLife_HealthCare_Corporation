@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediLife - Pharmacy and Health care</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/product-page.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var myButton = document.getElementById("cate1");
+
+      myButton.addEventListener("click", function () {
+        window.location.href = "https://www.pharmacity.vn/"; // Thay thế "trang-khac.html" bằng URL của trang bạn muốn chuyển đến
+      });
+      var myButton2 = document.getElementById("cate2");
+
+      myButton2.addEventListener("click", function () {
+        window.location.href = "https://nhathuocminhchau.com/pharma-science.option"; // Thay thế "trang-khac.html" bằng URL của trang bạn muốn chuyển đến
+      });
+      var myButton3 = document.getElementById("cate3");
+
+      myButton3.addEventListener("click", function () {
+        window.location.href = "https://www.pharmacity.vn/"; // Thay thế "trang-khac.html" bằng URL của trang bạn muốn chuyển đến
+      });
+    });
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+
+    .flexbox {
+      background: #5BC2AE;
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      align-items: center;
+    }
+
+    .search {
+      /* margin-left: 60px; */
+      margin: 20px 0 20px 60px;
+      float: left;
+    }
+
+    .dropdown {
+      float: left;
+      margin-left: 20px;
+    }
+
+    .search>h3 {
+      font-weight: normal;
+    }
+
+    .search>h1,
+    .search>h3 {
+      color: white;
+      margin-bottom: 15px;
+      text-shadow: 0 1px #0091c2;
+    }
+
+    .search>div {
+      display: inline-block;
+      position: relative;
+      filter: drop-shadow(0 1px #0091c2);
+    }
+
+    .search>div:after {
+      content: "";
+      background: white;
+      width: 4px;
+      height: 20px;
+      position: absolute;
+      top: 40px;
+      right: 2px;
+      transform: rotate(135deg);
+    }
+
+    .search>div>input {
+      color: white;
+      font-size: 16px;
+      background: transparent;
+      width: 25px;
+      height: 25px;
+      padding: 10px;
+      border: solid 3px white;
+      outline: none;
+      border-radius: 35px;
+      transition: width 0.5s;
+    }
+
+    .search>div>input::placeholder {
+      color: #efefef;
+      opacity: 0;
+      transition: opacity 150ms ease-out;
+    }
+
+    .search>div>input:focus::placeholder {
+      opacity: 1;
+    }
+
+    .search>div>input:focus,
+    .search>div>input:not(:placeholder-shown) {
+      width: 800px;
+    }
+
+
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <div class="container">
+      <div id="top-page">
+        <img src="img/logo.png" style="margin-left: 50px;">
+        <h1 id="com-name">MediLife HealthCare</h1>
+
+        <div id="menu-bar">
+          <ul>
+            <li><a class="mnbar-item active" href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
+            <li><a class="mnbar-item" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
+
+            <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
+            <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+            <div style="height: 80px; width: 180px; float: right;">
+              <button class="small-btn">
+                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+              </button>
+              <button class="small-btn">
+                <img src="img/notification.png" style="height: 20px;">
+              </button>
+              <button class="small-btn">
+                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+              </button>
+            </div>
+
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="bg-grey" style="margin-top: 90px;">
+    <div class="container" style="width: 1240px; margin: 0px auto;">
+
+
+
+      <!-- <div class="search_box">
+        <form class="sbox" action="/search" method="get">
+          <input class="stext" type="text" name="find" placeholder="Tìm kiếm món ăn...">
+          <a class="sbutton" type="submit">
+            <i  class="fa fa-search"></i>
+          </a>
+        </form>
+      </div> -->
+
+      <div class="flexbox">
+
+        <div class="dropdown">
+          <button class="dropbtn">Danh mục</button>
+          <div class="dropdown-content">
+            <a href="#">Được tin dùng</a>
+            <a href="#">Dược phẩm</a>
+            <a href="#">Tủ thuốc gia đình</a>
+          </div>
+        </div>
+        <div class="search">
+
+          <div>
+            <input type="text" placeholder="Search . . ." required>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="heading-section" style="text-align: center; margin-top: 30px;">
+        <h2>
+          NHÀ THUỐC MEDILIFE
+        </h2>
+      </div>
+
+
+
+      <!-- <nav class="menu" style="width: 100%;">
+        <ul>
+          <li><a href="#row1" class="active" onclick="selectMenuItem(this)">ĐƯỢC YÊU THÍCH</a></li>
+          <li><a href="#row2" onclick="selectMenuItem(this)">MÓN MỚI</a></li>
+          <li><a href="#row3" onclick="selectMenuItem(this)">GÀ HỘI AN</a></li>
+          <li><a href="#row4" onclick="selectMenuItem(this)">GÀ CHIÊN MẮM</a></li>
+          <li><a href="#row5" onclick="selectMenuItem(this)">CÁC MÓN KHÁC</a></li>
+          <li><a href="#row6" onclick="selectMenuItem(this)">ĂN KÈM VÀ NƯỚC UỐNG</a></li>
+        </ul>
+      </nav> -->
+      <div style="height: 200px; margin-top: 100px;">
+        <div id="cate1" class="link-btn">
+
+          <img src="img/cate1.png">
+          <p>Được tin dùng</p>
+        </div>
+        <div id="cate2" class="link-btn">
+
+          <img src="img/cate2.png">
+          <p>Dược phẩm</p>
+        </div>
+        <div id="cate3" class="link-btn">
+
+          <img src="img/cate3.png">
+          <p>Tủ thuốc gia đình</p>
+        </div>
+        <div id="cate4" class="link-btn">
+
+          <img src="img/cate4.png">
+          <p>Vệ sinh cá nhân</p>
+        </div>
+        <div id="cate5" class="link-btn">
+
+          <img src="img/cate5.png">
+          <p>Thực phẩm chức năng</p>
+        </div>
+        <div id="cate6" class="link-btn">
+
+          <img src="img/cate6.png">
+          <p>Mẹ và bé</p>
+        </div>
+        <div id="cate7" class="link-btn">
+
+          <img src="img/cate7.png">
+          <p>Chăm sóc sắc đẹp</p>
+        </div>
+        <div id="cate8" class="link-btn">
+
+          <img src="img/cate8.png">
+          <p>Thiết bị y tế</p>
+        </div>
+
+
+      </div>
+
+      <div class="menu-row" id="row1" style="width: 100%;">
+        <div class="cates">
+          <h2 class="title-cate">Được tin dùng nhiều nhất</h2>
+        </div>
+
+
+        <div class="product-card col-3 col-s-6">
+          <button class="sale">
+            -30%
+          </button>
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/detailpic.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="product-detail.html">Dung Dịch nhỏ mắt Vrohto Mineral Tear (Chai 13ml)</a>
+          </h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+      </div>
+      <div class="menu-row" id="row1" style="width: 100%;">
+        <div class="cates">
+          <h2 class="title-cate">Dược phẩm MediLife</h2>
+        </div>
+
+
+        <div class="product-card col-3 col-s-6">
+          <button class="sale">
+            -30%
+          </button>
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+      </div>
+      <div class="menu-row" id="row1" style="width: 100%;">
+        <div class="cates">
+          <h2 class="title-cate">Cùng MediLife bảo vệ sức khỏe cả nhà</h2>
+        </div>
+
+
+        <div class="product-card col-3 col-s-6">
+          <button class="sale">
+            -30%
+          </button>
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+      </div>
+      <div class="menu-row" id="row1" style="width: 100%;">
+        <div class="cates">
+          <h2 class="title-cate">Vệ sinh cá nhân</h2>
+        </div>
+
+
+        <div class="product-card col-3 col-s-6">
+          <button class="sale">
+            -30%
+          </button>
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+      </div>
+      <div class="menu-row" id="row1" style="width: 100%;">
+        <div class="cates">
+          <h2 class="title-cate">Thực phẩm chức năng</h2>
+        </div>
+
+
+        <div class="product-card col-3 col-s-6">
+          <button class="sale">
+            -30%
+          </button>
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+      </div>
+      <div class="menu-row" id="row1" style="width: 100%;">
+        <div class="cates">
+          <h2 class="title-cate">Mẹ và bé</h2>
+        </div>
+
+
+        <div class="product-card col-3 col-s-6">
+          <button class="sale">
+            -30%
+          </button>
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+        <div class="product-card col-3 col-s-6">
+
+
+          <div class="card-banner" style="text-align: center;">
+            <img src="img/medicine/eyemiru.jpg" class="med-pic">
+          </div>
+
+          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+
+          <div class="price-wrapper">
+            <data class="price">40.000đ</data>
+
+            <del class="del" value="69.00">45.000</del>
+
+          </div>
+          <button class="btn-addToCart">Thêm vào giỏ hàng</button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var cate1 = document.getElementById("cate1");
+
+      myDiv.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

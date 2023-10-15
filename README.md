@@ -1,0 +1,1 @@
+Thiết kế và triển khai website của công ty dược phẩm MediLife HealthCare kinh doanh thuốc, thực phẩm chức năng, vật tư y tế và cung cấp thông tin sức khỏe một cách chính xác, đầy đủ, dễ dàng tiếp cận và mang lại hiệu quả kinh tế cũng như cộng đồng.

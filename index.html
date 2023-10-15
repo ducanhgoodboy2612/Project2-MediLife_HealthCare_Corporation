@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediLife - Pharmacy and Health care</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        #test-nav{
+            color: blue;
+            margin-top: 250px;
+            background:#eaebf0;
+            overflow:hidden;
+            width:150px;
+        }
+       
+        #test-nav ul li {
+        list-style:none;
+        margin-top:10px;
+        padding:8px;
+        margin-left:0px;
+        }
+
+     
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7"></script>
+</head>
+<body>
+    <section class="header">
+        <div class="container" >
+            <div id="top-page">
+                <img src="img/logo.png" style="margin-left: 50px;">
+                <h1 id="com-name">MediLife HealthCare</h1>
+              
+                <div id="menu-bar">
+                    <ul>
+                        <li><a class="mnbar-item active" onclick="selectMenuItem(this)">Trang chủ</a></li>
+                        <li><a class="mnbar-item" href="product-page.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
+
+                        <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
+                        <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+                        <div style="height: 80px; width: 180px; float: right;">
+                            <button class="small-btn">
+                                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/notification.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+                            </button>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="slideshow">
+                <img id="slide" src="img/slide1.png">
+                <button id="slide-prev" onclick="back()">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <button id="slide-next" onclick="next()">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+            <script>
+                autoplay();
+            </script>
+
+        </div>
+    </section>
+
+    <section id="welcome" class="bg-white" style="height: 410px; margin-top: 100px;">
+        <div class="container" style="width: 1140px; margin: 0px auto;">
+            <div class="section-content">
+                <div class="heading-section">
+                    <h2>
+                        Welcome to MediLife HealthCare
+                    </h2>
+                </div>
+
+
+                <div class="welcome-block">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="donate.html" style="text-decoration: none;">
+                            <img src="img/fea2.png" class="featured-block-image img-fluid" alt="">
+
+                            <p class="featured-block-text">Tư vấn <br>chuyên gia</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="welcome-block">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="donate.html" style="text-decoration: none;">
+                            <img src="img/fea3.png" class="featured-block-image img-fluid" alt="">
+
+                            <p class="featured-block-text">Thuốc tốt<br> giá rẻ</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="welcome-block">
+                    <div class="featured-block">
+                        <a href="donate.html" style="text-decoration: none;">
+                            <img src="img/fea1.png" class="featured-block-image img-fluid" alt="">
+
+                            <p class="featured-block-text">Thông tin <br> sức khỏe</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="welcome-block">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="donate.html" style="text-decoration: none;">
+                            <img src="img/fea4.png" class="featured-block-image img-fluid" alt="">
+
+                            <p class="featured-block-text">Mã giảm <br> giá hot</p>
+                           
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-grey" id="intro" style="height: 625px;">
+        <div class="container" style="width: 1340px; ">
+            <div class="left-pic">
+                <img src="img/story.jpg">
+            </div>
+            <div class="right-des">
+                <div id="introduce">
+                    <h2 class="heading-title">Our Story</h2>
+
+                    <h3 style="color: #5AC0AB;">Công ty Dược phẩm và Dịch vụ chăm sóc sức khỏe MediLife</h3>
+
+                    <p>MediLife là một công ty dược phẩm và chăm sóc sức khỏe hàng đầu quốc tế, cam kết nâng cao sức khỏe và sự phát triển của mọi người trên toàn thế giới. Với sự tập trung mạnh mẽ vào đổi mới và chất lượng, chúng tôi luôn cố gắng cung cấp các giải pháp chăm sóc sức khỏe chất lượng và dễ tiếp cận. </p>
+                </div>
+                <div id="intro-row" style="width: 100%; height: max-content;">
+                    <div id="mission">
+                        <div class="custom-text-box">
+                            <h3 style="color: #5AC0AB;">Our Mission</h5>
+
+                            <p>Tại MediLife, sứ mạng của chúng tôi là trở thành đối tác tin cậy trong lĩnh vực chăm sóc sức khỏe, góp phần tích cực vào sức khỏe và sự phát triển toàn cầu.</p>
+
+                            <ul class="custom-list">
+                                <li class="custom-list-item">
+                                    <i class="fas fa-check"></i>
+                                    Charity Theme
+                                </li>
+
+                                <li class="custom-list-item">
+                                    <i class="fas fa-check"></i>
+                                    Semantic HTML
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="achieve">
+                        <div class="custom-text-box ">
+                            <div class="counter-thumb"> 
+                                <div class="d-flex">
+                                    <!-- Đoạn mã HTML -->
+                                    <span class="counter-number" data-from="1" data-to="2009" data-speed="1000"></span>
+
+                                    <!-- Đoạn mã JavaScript -->
+                                    <script>
+                                        // Lấy tất cả các phần tử có lớp "counter-number"
+                                        const counters = document.querySelectorAll('.counter-number');
+
+                                        // Thực hiện hiệu ứng số đếm cho từng phần tử
+                                        counters.forEach(counter => {
+                                            const from = parseInt(counter.getAttribute('data-from'));
+                                            const to = parseInt(counter.getAttribute('data-to'));
+                                            const speed = parseInt(counter.getAttribute('data-speed'));
+
+                                            const countUp = new CountUp(counter, from, to, 0, speed);
+                                            if (!countUp.error) {
+                                                countUp.start();
+                                            } else {
+                                                console.error(countUp.error);
+                                            }
+                                        });
+                                    </script>
+
+                                    <span class="counter-number-text"></span>
+                                </div>
+
+                                <span class="counter-text">Founded</span>
+                            </div> 
+
+                            <div class="counter-thumb mt-4"> 
+                                <div class="d-flex">
+                                    <span class="counter-number" data-from="1" data-to="120" data-speed="1000"></span>
+                                    <span class="counter-number-text">B</span>
+                                </div>
+
+                                <span class="counter-text">Donations</span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+           
+            <!-- <div class="row">
+
+                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                    <img src="images/group-people-volunteering-foodbank-poor-people.jpg" class="custom-text-box-image img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="custom-text-box">
+                        <h2 class="mb-2">Our Story</h2>
+
+                        <h5 class="mb-3">Kind Heart Charity, Non-Profit Organization</h5>
+
+                        <p class="mb-0">This is a Bootstrap 5.2.2 CSS template for charity organization websites. You can feel free to use it. Please tell your friends about TemplateMo website. Thank you. HTML CSS files updated on 20 Oct 2022.</p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="custom-text-box mb-lg-0">
+                                <h5 class="mb-3">Our Mission</h5>
+
+                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor quis metus</p>
+
+                                <ul class="custom-list mt-2">
+                                    <li class="custom-list-item d-flex">
+                                        <i class="bi-check custom-text-box-icon me-2"></i>
+                                        Charity Theme
+                                    </li>
+
+                                    <li class="custom-list-item d-flex">
+                                        <i class="bi-check custom-text-box-icon me-2"></i>
+                                        Semantic HTML
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
+                                <div class="counter-thumb"> 
+                                    <div class="d-flex">
+                                        <span class="counter-number" data-from="1" data-to="2009" data-speed="1000"></span>
+                                        <span class="counter-number-text"></span>
+                                    </div>
+
+                                    <span class="counter-text">Founded</span>
+                                </div> 
+
+                                <div class="counter-thumb mt-4"> 
+                                    <div class="d-flex">
+                                        <span class="counter-number" data-from="1" data-to="120" data-speed="1000"></span>
+                                        <span class="counter-number-text">B</span>
+                                    </div>
+
+                                    <span class="counter-text">Donations</span>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
+        </div>
+       
+    </section>
+
+    <section id="intro2" class="bg-white" style="height: 700px;">
+        <div class="container" style="width: 1340px; margin: 0px auto;">
+            <div class="section-content">
+                <div class="heading-section">
+                    <h2>
+                        
+                    </h2>
+                </div>
+
+                <div class="row" style="height: 550px;">
+                    <div class="left-des">
+        
+                        <h1 class="heading-title"> Dược phẩm chất lượng và an toàn, tuân thủ nghiêm ngặt các tiêu chuẩn quốc tế</h1>
+                        <p>Đội ngũ chuyên gia của chúng tôi luôn tận dụng sự sáng tạo
+                             và nghiên cứu để phát triển các giải pháp y tế tiên tiến 
+                             và cải thiện chất lượng cuộc sống của hàng triệu người trên 
+                             khắp thế giới thông qua việc cung cấp các sản phẩm chăm sóc sức khỏe hiệu quả.
+                        </p>
+                    </div>
+        
+                    <div class="right-pic">
+                        <img src="img/intro-thuoc.jpg" style="width: 95%; height: 90%; margin-left: 45px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="bg-white section-padding" style="height: 600px;">
+        <div class="container" style="width: 1140px; height: 665x; margin: 0px auto; padding-bottom: 80px;">
+            <div class="section-content">
+                <div class="heading-section">
+                    <h2>
+                        ĐỘI NGŨ CHUYÊN GIA
+                    </h2>
+                </div>
+
+                <div id="mem-lst" style="height: 450px;">
+                    <div class="team-card" style="width: 30%; float: left;">
+                        <img src="img/bsi1.jpg" style="height: 450px; border-radius: 20px; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);" >
+                        <div class="team-desc">
+                            <h3>PGS.TS</h3>
+                            <h2 style="font-family: 'Gabarito', sans-serif;">Đỗ Quang Toản</h2>
+                           
+                        </div>
+                    </div>
+
+                    <div class="team-card" style="width: 30%; float: left;">
+                        <img src="img/bsi3.jpg" style="height: 450px; width: 300px;">
+                        <div class="team-desc">
+                            <h3>PGS.TS</h3>
+                            <h2 style="font-family: 'Gabarito', sans-serif;">Hà Minh Điền</h2>
+                            
+                        </div>
+                    </div>
+                    <div class="team-card" style="width: 30%; float: left;">
+                        <img src="img/bsi2.jpg" style="height: 450px;">
+                        <div class="team-desc">
+                            <h3>PGS.TS</h3>
+                            <h2 style="font-family: 'Gabarito', sans-serif;;">Trần Văn Khang</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro3" class="bg-white" style="height: 400px;">
+        <div class="container">
+          <img id="consult-pic" src="img/cause1.jpg" alt="Consult">
+          <div class="gradient-mask"></div>
+          <h2>Your Health is Our Top Priority</h2>
+        </div>
+    </section>
+
+    <section class="section-padding" id="section_3" style="height: 680px;">
+        <div class="container" style="width: 1240px; margin: 0px auto;">
+            <div class="heading-section">
+                <h2>
+                    CÙNG CHÚNG TÔI HỖ TRỢ Y TẾ TOÀN CẦU
+                </h2>
+            </div>
+            <div class="menu-row" id="row1" style="width: 100%;">
+              
+        
+                <div class="donate-card col-3 col-s-6">
+        
+                  <div class="card-banner" style="text-align: center;">
+                    <img src="img/cause1.jpg" class="cause-pic">
+                    <!-- <button class="food-menu-btn">Ủng hộ</button> -->
+                  </div>
+                  <div class="donation-text">
+                    <h3 class="card-title">Sức khỏe cho trẻ em</h3>
+                    <p class="content-text">Tạo ra một thế giới tốt đẹp hơn, nơi mà mọi đứa trẻ trên thế giới có cơ hội phát triển sức khỏe toàn diện và đóng góp vào tương lai của thế giới.</p>
+                    
+                </div>
+                <button class="donate-btn" >Tìm hiểu thêm</button>         
+
+                </div>
+                <div class="donate-card col-3 col-s-6">
+                 
+                  <div class="card-banner" style="text-align: center;">
+                    <img src="img/cause2.jpg" class="cause-pic">
+                    <!-- <button class="food-menu-btn">Ủng hộ</button> -->
+                  </div>
+                        
+                  <div class="donation-text">
+                    <h3 class="card-title">Vấn đề tiêm chủng</h3>
+                    <p class="content-text">Mỗi liều vaccine là một bước tiến quan trọng trong cuộc chiến chống lại các dịch bệnh và đói nghèo.</p>
+                  </div>       
+                  <button class="donate-btn" >Tìm hiểu thêm</button>  
+                </div>
+        
+                <div class="donate-card col-3 col-s-6">
+        
+                  <div class="card-banner" style="text-align: center;">
+                    <img src="img/cause3.jpg" class="cause-pic">
+                    <!-- <button class="food-menu-btn">Ủng hộ</button> -->
+                  </div>
+                   <div class="donation-text">
+                    <h3 class="card-title">Cung cấp nước sạch</h3>
+                    <p class="content-text">Sự thiếu hụt nước sạch là một thách thức lớn đối với nhiều cộng đồng trên khắp thế giới. Chúng ta có thể làm nên sự khác biệt. </p>
+                  </div> 
+                  <button class="donate-btn" >Tìm hiểu thêm</button>      
+                </div>
+        
+              </div>
+        </div>
+    </section>
+
+    <section id="reservation" style="background-image: url(img/reser.jpg);">
+        <div id="reser-form" style="background-color: #DEEFDE; padding-top: 10px;">
+            <div class="heading-section">
+
+                <h2 style="margin-top: -10px">
+                    Đặt lịch tư vấn sức khỏe
+                </h2>
+            </div>
+            <form method="post" name="reser">
+                <div class="row">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Họ tên">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                            placeholder="Số điện thoại">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="datetime" name="datetime" placeholder="Thời gian">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" style="height: 100px;"
+                            placeholder="Hãy cho các bác sĩ của chúng tôi biết trước về các vấn đề của bạn..."></textarea>
+                    </div>
+                    <div class=" text-center">
+                        <button id="btn-reser"
+                            type="submit" name="submit">Đặt lịch</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- <div class="foot-div" style="height: 100px;">
+    </div> -->
+    <footer style="margin-top: 40px;">
+        <div class="container">
+            <div class="row">
+
+                <div class="foot-nav" style="margin-left: 100px;">
+                    <h4>Về MediLife</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Hệ thống cửa hàng</a></li>
+                        <li><a href="#">Giấy phép kinh doanh</a></li>
+                        <li><a href="#">Quy chế hoạt động</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="foot-nav">
+                    <h4>Danh mục</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Dược phẩm</a></li>
+                        <li><a href="#">Tủ thuốc gia đình</a></li>
+                        <li><a href="#">Vệ sinh cá nhân</a></li>
+                        <li><a href="#">Thực phẩm chức năng</a></li>
+                        <li><a href="#">Mẹ và bé</a></li>
+                        <li><a href="#">Chăm sóc sắc đẹp</a></li>
+                        <li><a href="#">Thiết bị y tế</a></li>
+                    </ul>
+                </div>
+                <div class="foot-nav">
+                    <h4>Liên hệ</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 334 Đường Nguyễn Trãi, Q.Thanh Xuân, Hà Nội</li>
+                        <li><i class="fas fa-phone"></i> Điện thoại: 0123456789</li>
+                        <li><i class="fas fa-envelope"></i> Email: medilifevietnam@gmail.com</li>
+                    </ul>
+                    <h4>Kết nối với chúng tôi</h4>
+                    <img src="img/contact.jpg">
+                </div>
+                <div class="foot-nav">
+                    <div id="foot-logo" style="background-color: #eaebf0; border-radius: 50%;">
+                        <img src="img/logo.png" style="margin: 20px 35px;">
+                    </div>
+                    <!-- <img id="foot-logo" src="img/logock-removebg-preview.png"> -->
+                </div>
+            </div>
+
+            <div class="row" >
+                <div>   
+                    <p class="text-center"></p>
+                </div>
+            </div>
+            <div id="bot-div" style="margin-top: 50px;">
+                <img src="img/logo_footer.png">
+                <p>© MediLife HealthCare Corporation. All rights reserved. Author: Pham Le Duc Anh</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- <section id="welcome" class="bg-white section-padding" style="margin-top: 150px;">
+        <div class="container">
+            <div class="section-content">
+                <div class="row" style="height: 500px;">
+                    <div class="left-content">
+                        <img src="img/hoi an 2_1563176621 (1).jpg"
+                            style="width: 90%; margin: 100px 5px; border-radius: 10px;">
+                    </div>
+
+                    <div class="right-content">
+                        <h1 class="sec-title" style="color: orange; margin-top: 100px;">Cảm nhận hương vị Hội An từ cách
+                            xa hàng trăm cây số</h1>
+                        <span style="margin-left: 20px; width: 80%;">
+                            Có thể nói rằng ai đến phố cổ mà chưa được thưởng thức món cơm gà Hội An lừng danh thì xem
+                            như chưa được trải nghiệm trọn vẹn ẩm thực của mảnh đất miền Trung này.
+
+                            Nếu ẩm thực Huế được biết đến bởi nét tinh tế và điệu đà với vô vàn món ăn vừa đẹp vừa ngon
+                            và được chế biến theo phong cách cung đình thanh tao, ẩm thực miền Tây chiếm trọn cảm tình
+                            của nhiều người bởi hương vị ngọt ngào, gần gũi thì ẩm thực Hội An nói riêng và xứ Quảng nói
+                            chung lại không lẫn vào đâu được vì sự thô mộc, bình dị mà đậm đà mang đủ vị mặn mà ẩn chứa
+                            trong mỗi món ăn. Thật vậy, cơm gà Hội An được nhiều thực khách yêu thích bởi vì người tìm
+                            thấy được cái hồn xứ Quảng trong mỗi thành phần làm nên nó.
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+</body>
+</html>

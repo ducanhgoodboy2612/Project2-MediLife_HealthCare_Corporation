@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="styles/payment.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #fbf9f9;">
+    <section class="header">
+        <div class="container">
+            <div id="top-page">
+                <img src="img/logo.png" style="margin-left: 50px;">
+                <h1 id="com-name">MediLife HealthCare</h1>
+
+                <div id="menu-bar">
+                    <ul>
+                        <li><a class="mnbar-item active" onclick="selectMenuItem(this)">Trang chủ</a></li>
+                        <li><a class="mnbar-item" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
+
+                        <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
+                        <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+                        <div style="height: 80px; width: 180px; float: right;">
+                            <button class="small-btn">
+                                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/notification.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+                            </button>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="main">
+        <div class="container" style="width: 1140px;  margin: 130px auto;">
+            <div class="row">
+                <div class="col-6 col-s-12 padding-form" id="form">
+                    <div class="title">THÔNG TIN THANH TOÁN</div>
+                    <div class=note>(<span>*</span>) Bắt buộc</div>
+                    <form action="#" onsubmit="return DatHang()" method="post">
+                        <div class="row">
+                            <div class="col-12 col-s-12">
+                                <label for="txt_hoten">Họ tên: <span>*</span></label><br>
+                                <input type="text" id="txt_hoten">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-s-12">
+                                <label for="txt_sdt">Số điện thoại: <span>*</span></label><br>
+                                <input type="text" id="txt_sdt">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-s-12">
+                                <label for="txt_email">Email:</label><br>
+                                <input type="text" id="txt_email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-s-12">
+                                <label for="txt_diachi">Địa chỉ: <span>*</span></label><br>
+                                <textarea id="txt_diachi" cols="135" rows="1"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-s-12">
+                                <label for="txt_ghichu">Ghi chú:</label><br>
+                                <textarea id="txt_ghichu" cols="135" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-3 col-s-12 padding-form main-div" style="float: left; margin-left: 175px;">
+                    <div id="km">
+                        <p>Mã khuyến mại</p>
+                        <a href="#">Chọn mã</a>
+                    </div>
+                    <div class="title">TỔNG TIỀN</div>
+                    <div class="row pay" style="border-bottom: 3px solid #dbdbdb;">
+
+                        <div class="div-pay" style="text-align: left; height: 50px;">
+                            <label>Tạm tính</label>
+
+                        </div>
+                        <div class="div-pay" style="text-align: left; height: 50px;">
+                            <label>Phí vận chuyển</label>
+
+                        </div>
+                        <div class="div-pay" style="text-align: left; height: 50px;">
+                            <label>Thành tiền</label>
+
+                        </div>
+                    </div>
+                    <div id="spham"></div>
+
+                    <!-- <div class="row trace">
+                        <div class="col-6 col-s-12" style="text-align: left;">
+                            <label>Tổng</label>
+                        </div>
+                        <div class="col-6 col-s-12" style="text-align: right;">
+                            <label id="tt">0</label>đ
+                        </div>
+                    </div> -->
+                    <div class="row pay">
+                        <div class="col-12 col-s-12" style="text-align: left;">
+                            <button id="btn-pay" onclick="DatHang()">ĐẶT HÀNG</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 col-s-12 padding-form">
+                    <div class="title">PHƯƠNG THỨC THANH TOÁN</div>
+                    <div class="radio-item">
+
+                        <input name="radio" id="radio1" type="radio"><label for="radio1">Thanh toán khi nhận
+                            hàng</label>
+                    </div>
+                    <div class="radio-item"><input name="radio" id="radio2" type="radio"><label
+                            for="radio2">Momo</label></div>
+                    <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">Viettel
+                            Money</label></div>
+                    <div class="radio-item"><input name="radio" id="radio4" type="radio"><label for="radio4">Thẻ tín
+                            dụng</label></div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
