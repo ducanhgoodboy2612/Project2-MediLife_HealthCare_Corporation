@@ -79,9 +79,9 @@
             khoáng chất và nước mắt nhân tạo giúp giữ ẩm, làm dịu mắt khô. Phục hồi và tạo sự thoải mái cho mắt mỏi, mắt
             kích ứng nhẹ, mắt khó chịu do đeo kính áp tròng, mắt mờ (do tiết dịch).</div>
           <div id="quantity" style="margin-top: 20px;">
-            <input class="round-btn" type="button" value="-" onclick="dec('numtxt','total')">
+            <input class="round-btn" type="button" value="-" onclick="dec('numtxt')">
             <input id="numtxt" type="text" value="1">
-            <input class="round-btn" type="button" value="+" onclick="inc('numtxt','total')">
+            <input class="round-btn" type="button" value="+" onclick="inc('numtxt')">
 
           </div>
           <div style="height: 45px; margin-top: 40px;">
@@ -333,7 +333,7 @@
             <img src="img/medicine/eyemiru.jpg" class="med-pic">
           </div>
 
-          <h3 class="card-title"><a href="#">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
+          <h3 class="card-title"><a href="product-detail2.html">Bundle Dung dịch rửa mắt Eyemiru Wash (500ml)</a></h3>
 
           <div class="price-wrapper">
             <data class="price">40.000đ</data>
@@ -424,6 +424,7 @@
 
   <script src="js/jquery-3.6.4.min.js" type="text/Javascript"></script>
   <script>
+    var price = 58000;
     $(document).ready(function () {
 
       $("#btn-addToCart").click(function () {
@@ -438,21 +439,21 @@
 
 
         var pImg = $(this).parent().parent().parent().parent().find(".detail-left").find("#detailpic").attr("src");
-        var pName = $(this).parent().parent().find("#product-name").text();
+        var pName = $(this).parent().parent().parent().parent().find(".detail-right").find("#med-name").text();
         var pPrice = $(this).parent().parent().find("#product-price").find(".ProductPrice_price").text();
         var pNum = $(this).parent().parent().find("#quantity").find("#numtxt").val();
         //var pTotal = $(this).parent().find("#quan").find("#total").text();
-        // var pTotal = (pNum * parseInt(pPrice.substring(0, pPrice.length - 4))).toString();
-
+         var pTotal = (pNum * parseInt(pPrice.substring(0, pPrice.length - 6).replace(".", ""))).toString();
+         //var formattedTotal = pTotal.toLocaleString("vi-VN", { style: "currency", currency: "VND" });
         var product = {
           "img": pImg,
           "name": pName,
           "price": pPrice,
           "num": pNum,
-          //"total": pTotal
+          "total": pTotal + ".000 đ"
         };
-        alert("Đã thêm hàng vào giỏ." + '\n' + pName + '\n' + pPrice + '\n' + pNum + '\n' + pImg);
-        alert(pImg + " " + pName + " " + pPrice + " " + pNum );
+        alert("Đã thêm hàng vào giỏ." + '\n' + pName + '\n' + pPrice + '\n' + pNum + '\n' + pImg  + '\n' + pTotal);
+      
         var cart = sessionStorage.getItem("local-cart");
         var cartProducts = [];
         if (cart != null) {

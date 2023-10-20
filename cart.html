@@ -1,69 +1,46 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediLife - Pharmacy and Health care</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediLife - Pharmacy and Health care</title>
+  <link rel="stylesheet" href="styles/main.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="js/jquery-3.6.4.min.js" type="text/Javascript"></script>
+  <script src="js/cart.js" type="text/Javascript"></script>
+
+  <script>
+    function dec(x) {
+      a = parseInt(document.getElementById(x).value);
+      if (a > 1) {
+        a -= 1;
+        // document.getElementById(p).textContent = price * (a) + " VNĐ";
+      }
+      document.getElementById(x).value = a;
+    }
+    // function inc(x){
+    //     a = parseInt(document.getElementById(x).value);
+
+    //     document.getElementById(x).value = a + 1;
+    //      document.getElementById(p).textContent = pri * (a+1) + " VNĐ";
+    // }
+
   
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <script src="js/jquery-3.6.4.min.js" type="text/Javascript"></script>
 
+    $(document).ready(function () {
+      var cart = sessionStorage.getItem("local-cart");
+      var cartProducts = JSON.parse(cart || "[]"); // Parse the cart or initialize as an empty array if it's null or invalid JSON
 
-    <script>
-        function dec(x) {
-            a = parseInt(document.getElementById(x).value);
-            if (a > 1) {
-                a -= 1;
-                // document.getElementById(p).textContent = price * (a) + " VNĐ";
-            }
-            document.getElementById(x).value = a;
-        }
-        // function inc(x){
-        //     a = parseInt(document.getElementById(x).value);
-
-        //     document.getElementById(x).value = a + 1;
-        //      document.getElementById(p).textContent = pri * (a+1) + " VNĐ";
-        // }
-
-        function inc(btn) {
-            var row = btn.parentNode.parentNode;
-            var numtxt = row.querySelector('input[type="text"]');
-            var currentValue = parseInt(numtxt.value);
-            var newValue = currentValue + 1;
-            numtxt.value = newValue;
-            var price = parseInt(row.querySelector('td:nth-child(4)').textContent);
-            var total = price * newValue;
-            row.querySelector('#total').textContent = total + ".000 VNĐ";
-        }
-        function dec(btn) {
-            var row = btn.parentNode.parentNode;
-            var numtxt = row.querySelector('input[type="text"]');
-            var currentValue = parseInt(numtxt.value);
-            var newValue = currentValue - 1;
-            if (newValue < 1) {
-                newValue = 1;
-            }
-            numtxt.value = newValue;
-            var price = parseInt(row.querySelector('td:nth-child(4)').textContent);
-            var total = price * newValue;
-            row.querySelector('#total').textContent = total + ".000 VNĐ";
-        }
-        $(document).on("click", "img[src='img/remove.png']", function () {
-            $(this).parent().parent().remove();
-        });
-        $(document).ready(function () {
-  var cart = sessionStorage.getItem("local-cart");
-  var cartProducts = JSON.parse(cart || "[]"); // Parse the cart or initialize as an empty array if it's null or invalid JSON
-
-  var amount = cartProducts.length;
-  alert(amount);
-  alert(cartProducts);
-  var table = `
+      var amount = cartProducts.length;
+      // alert(amount);
+      // alert(cartProducts);
+      var table = `
             <table id="product-table" cellpadding="10px" cellspacing="20px" style="border: 1px solid; margin: 20px auto">
                     <tr>
                         <th>STT</th>
@@ -75,10 +52,10 @@
                         <th>Xóa</th>
                     </tr>
             `;
-  // ... (rest of your code)
-  for (var i = 0; i < amount; i++) {
-    var cartProduct = cartProducts[i]; // Get the product at the current index
-    var row = `
+      // ... (rest of your code)
+      for (var i = 0; i < amount; i++) {
+        var cartProduct = cartProducts[i]; // Get the product at the current index
+        var row = `
         <tr>
             <td>${i + 1}</td>
             <td><img style="width: 60px" src="${cartProduct.img}" ></td>
@@ -89,92 +66,72 @@
                 <input id="numtxt" style="width: 30px; height: 25px" type="text" value="${cartProduct.num}" />
                 <input class="round-btn" style="width: 25px; height: 25px; border-radius: 50%;" type="button" value="+" onclick="inc(this)"/>
             </td>
-            <td><p id="total">${cartProduct.price * cartProduct.num}</td>
+            <td><p id="total">${cartProduct.total}</td>
             <td>
                 <img src="img/remove.png" style="width: 20px" >
             </td>
         </tr>
     `;
 
-    table += row;
-}
+        table += row;
+      }
+      
+      table += `</table>`;
+      
 
+      $("#table-content").html(table);
 
-//   for (var i = 0; i < amount; i++) {
-    // var row = `
-    // <tr>
-    //     <td>${i + 1}</td>
-    //     <td><img style="width: 60px" src="${products[i].img}" ></td>
-    //     <td>${products[i].name}</td>
-    //     <td>${products[i].price}</td>
-    //     <td>
-    //         <input class="round-btn" style="width: 25px; height: 25px; border-radius: 50%;" type="button" value="-" onclick="dec(this)" />
-    //         <input id="numtxt" style="width: 30px; height: 25px" type="text" value="${products[i].num}" />
-    //         <input class="round-btn" style="width: 25px; height: 25px; border-radius: 50%;" type="button" value="+" onclick="inc(this)"/>
-    //     </td>
-        
-
-    //     <td>
-    //         <img src="img/remove.png" style="width: 20px" >
-    //     </td>
-    // </tr>
-    // `;
-
-//     table += row;
-//   }
-
-  table += `</table>`;
-
-  $("#table-content").html(table);
-});
-    </script>
+    });
+  </script>
 </head>
+
 <body>
-    <section class="header">
-        <div class="container">
-          <div id="top-page">
-            <img src="img/logo.png" style="margin-left: 50px;">
-            <h1 id="com-name">MediLife HealthCare</h1>
-    
-            <div id="menu-bar">
-              <ul>
-                <li><a class="mnbar-item active" onclick="selectMenuItem(this)">Trang chủ</a></li>
-                <li><a class="mnbar-item" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
-    
-                <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
-                <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
-                <div style="height: 80px; width: 180px; float: right;">
-                  <button class="small-btn">
-                    <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
-                  </button>
-                  <button class="small-btn">
-                    <img src="img/notification.png" style="height: 20px;">
-                  </button>
-                  <button class="small-btn">
-                    <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
-                  </button>
-                </div>
-    
-              </ul>
+  <section class="header">
+    <div class="container">
+      <div id="top-page">
+        <img src="img/logo.png" style="margin-left: 50px;">
+        <h1 id="com-name">MediLife HealthCare</h1>
+
+        <div id="menu-bar">
+          <ul>
+            <li><a class="mnbar-item active" onclick="selectMenuItem(this)">Trang chủ</a></li>
+            <li><a class="mnbar-item" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
+
+            <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
+            <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+            <div style="height: 80px; width: 180px; float: right;">
+              <button class="small-btn">
+                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+              </button>
+              <button class="small-btn">
+                <img src="img/notification.png" style="height: 20px;">
+              </button>
+              <button class="small-btn">
+                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+              </button>
             </div>
-          </div>
-    
-    
+
+          </ul>
         </div>
-    </section>
-    <section class="bg-grey" style="margin-top: 50px;">
-        <div class="container">
-            <div class="heading-section" style="text-align: center; margin-top: 60px;">
-                <h2>
-                    GIỎ HÀNG 
-                </h2>
-            </div>
-            <div id="table-content" style="width: 1140px; margin: 0px auto; min-height: 360px;">
-              
-        
-            </div>
-        </div>
-    </section>
+      </div>
+
+
+    </div>
+  </section>
+  <section class="bg-grey" style="margin-top: 50px;">
+    <div class="container">
+      <div class="heading-section" style="text-align: center; margin-top: 60px;">
+        <h2>
+          GIỎ HÀNG
+        </h2>
+      </div>
+      <div id="table-content" style="width: 1140px; margin: 0px auto; min-height: 360px;">
+
+
+      </div>
+    </div>
+  </section>
 
 </body>
+
 </html>

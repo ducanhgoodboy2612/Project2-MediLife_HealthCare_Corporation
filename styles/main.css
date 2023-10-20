@@ -56,11 +56,14 @@ a {
 .active {
   color: green;
 
-
+  font-size: 20px;
   overflow: hidden;
-  border-left: 2px solid green;
+  border-bottom: 2px solid green;
   padding: 8px;
 
+}
+.p-introduce{
+  font-size: 16dp;
 }
 
 .row {
@@ -674,6 +677,7 @@ button:focus {
   margin-top: -10px;
   gap: 5px;
   font-family: 'Open Sans', sans-serif;
+  color: #1b1d1e;
 }
 
 /* .food-menu-card:focus-within { outline: 1px auto -webkit-focus-ring-color; } */
@@ -786,6 +790,8 @@ button:focus {
 .blog-card a:hover {
   cursor: pointer;
 }
+
+
 
 
 /*======================================

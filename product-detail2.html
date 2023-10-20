@@ -428,21 +428,20 @@
 
 
         var pImg = $(this).parent().parent().parent().parent().find(".detail-left").find("#detailpic").attr("src");
-        var pName = $(this).parent().parent().find("#product-name").text();
+        var pName = $(this).parent().parent().parent().parent().find(".detail-right").find("#med-name").text();
         var pPrice = $(this).parent().parent().find("#product-price").find(".ProductPrice_price").text();
         var pNum = $(this).parent().parent().find("#quantity").find("#numtxt").val();
-        //var pTotal = $(this).parent().find("#quan").find("#total").text();
-        // var pTotal = (pNum * parseInt(pPrice.substring(0, pPrice.length - 4))).toString();
-
+        var pTotal = (pNum * parseInt(pPrice.substring(0, pPrice.length - 6).replace(".", ""))).toString();
+         //var formattedTotal = pTotal.toLocaleString("vi-VN", { style: "currency", currency: "VND" });
         var product = {
           "img": pImg,
           "name": pName,
           "price": pPrice,
           "num": pNum,
-          //"total": pTotal
+          "total": pTotal + ".000 đ"
         };
-        alert("Đã thêm hàng vào giỏ." + '\n' + pName + '\n' + pPrice + '\n' + pNum + '\n' + pImg);
-        alert(pImg + " " + pName + " " + pPrice + " " + pNum );
+        alert("Đã thêm hàng vào giỏ." + '\n' + pName + '\n' + pPrice + '\n' + pNum + '\n' + pImg  + '\n' + pTotal);
+ 
         var cart = sessionStorage.getItem("local-cart");
         var cartProducts = [];
         if (cart != null) {
