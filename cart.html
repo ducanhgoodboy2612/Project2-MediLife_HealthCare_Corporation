@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MediLife - Pharmacy and Health care</title>
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/cart.css">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
@@ -41,7 +42,7 @@
       // alert(amount);
       // alert(cartProducts);
       var table = `
-            <table id="product-table" cellpadding="10px" cellspacing="20px" style="border: 1px solid; margin: 20px auto">
+            <table id="product-table" cellpadding="10px" cellspacing="20px" style="border: 1px solid;">
                     <tr>
                         <th>STT</th>
                         <th>Ảnh</th>
@@ -94,8 +95,8 @@
 
         <div id="menu-bar">
           <ul>
-            <li><a class="mnbar-item active" onclick="selectMenuItem(this)">Trang chủ</a></li>
-            <li><a class="mnbar-item" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
+            <li><a class="mnbar-item" href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
+            <li><a class="mnbar-item" href="product-page.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
 
             <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
             <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
@@ -119,16 +120,28 @@
     </div>
   </section>
   <section class="bg-grey" style="margin-top: 50px;">
-    <div class="container">
+    <div class="container" style="width: 1340px; margin: 0px auto;">
       <div class="heading-section" style="text-align: center; margin-top: 60px;">
         <h2>
           GIỎ HÀNG
         </h2>
       </div>
-      <div id="table-content" style="width: 1140px; margin: 0px auto; min-height: 360px;">
-
-
+      
+      <div id="table-content" >      </div>
+      <div id="cart-total" >
+          <h4 style="font-size: 26px;">Tổng tiền</h4>
+          <div>
+            <p style="float: left; margin-top: -5px;">Tạm tính: </p>
+            <span id="subtotal"></span>
+          </div>
+          <hr>
+          <div style="height: 45px; margin-top: 40px; width: 100%;">
+            <button id="back-to-product">Mua thêm</button>
+            <button id="btn-checkout">Thanh toán ></button>
+          </div>
+          
       </div>
+
     </div>
   </section>
 

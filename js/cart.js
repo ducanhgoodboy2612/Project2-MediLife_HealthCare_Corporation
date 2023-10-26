@@ -40,3 +40,16 @@ function inc(btn) {
   $(document).on("click", "img[src='img/remove.png']", function () {
     $(this).parent().parent().remove();
   });
+
+  $(document).ready(function () {
+    var cart = sessionStorage.getItem("local-cart");
+    var cartProducts = JSON.parse(cart || "[]");
+
+    var total = 0;
+    for (var i = 0; i < cartProducts.length; i++) {
+      total += cartProducts[i].sum;
+    }
+  
+    // Update the subtotal value in the HTML
+    $("#subtotal").text(total.toString() + ".000 đ");
+  });
