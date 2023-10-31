@@ -17,14 +17,14 @@
   <script src="js/cart.js" type="text/Javascript"></script>
 
   <script>
-    function dec(x) {
-      a = parseInt(document.getElementById(x).value);
-      if (a > 1) {
-        a -= 1;
-        // document.getElementById(p).textContent = price * (a) + " VNĐ";
-      }
-      document.getElementById(x).value = a;
-    }
+    // function dec(x) {
+    //   a = parseInt(document.getElementById(x).value);
+    //   if (a > 1) {
+    //     a -= 1;
+    //     // document.getElementById(p).textContent = price * (a) + " VNĐ";
+    //   }
+    //   document.getElementById(x).value = a;
+    // }
     // function inc(x){
     //     a = parseInt(document.getElementById(x).value);
 
@@ -53,7 +53,7 @@
                         <th>Xóa</th>
                     </tr>
             `;
-      // ... (rest of your code)
+      
       for (var i = 0; i < amount; i++) {
         var cartProduct = cartProducts[i]; // Get the product at the current index
         var row = `
@@ -137,7 +137,7 @@
           <hr>
           <div style="height: 45px; margin-top: 40px; width: 100%;">
             <button id="back-to-product">Mua thêm</button>
-            <button id="btn-checkout">Thanh toán ></button>
+            <button id="btn-checkout" onclick="go_to_check()">Thanh toán ></button>
           </div>
           
       </div>

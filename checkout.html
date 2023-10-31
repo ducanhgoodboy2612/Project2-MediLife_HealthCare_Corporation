@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán</title>
-    <link rel="stylesheet" href="styles/payment.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles/checkout.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
@@ -97,14 +98,17 @@
 
                         <div class="div-pay" style="text-align: left; height: 50px;">
                             <label>Tạm tính</label>
+                            <span id="subtotal"></span>
 
                         </div>
                         <div class="div-pay" style="text-align: left; height: 50px;">
                             <label>Phí vận chuyển</label>
+                            <span>30.000 đ</span>
 
                         </div>
                         <div class="div-pay" style="text-align: left; height: 50px;">
                             <label>Thành tiền</label>
+                            <span id="total"></span>
 
                         </div>
                     </div>
@@ -146,6 +150,14 @@
         </div>
         </div>
     </section>
+    <script>
+        $(document).ready(function () {
+        
+            var cartTotal = sessionStorage.getItem("cartTotal");
+            $("#subtotal").text(cartTotal.toString() + ".000 đ");
+            $("#total").text(cartTotal.toString() + ".000 đ");
+        });
+    </script>
 </body>
 
 </html>

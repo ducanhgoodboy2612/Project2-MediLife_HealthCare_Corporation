@@ -258,3 +258,16 @@ textarea {
 	visibility: visible;
 	transform: scale(1);
 }
+.div-pay label{
+    float: left;
+}
+.div-pay span{
+    float: right;
+}
+#subtotal{
+    font-size: 22px;
+}
+#total{
+    font-size: 24px;
+    color: #5BC2AE;
+}

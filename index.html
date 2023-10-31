@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediLife - Pharmacy and Health care</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/transition.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <style>
+    <script src="js/transition.js"></script>
+    <!-- <style>
         #test-nav{
             color: blue;
             margin-top: 250px;
@@ -28,7 +30,7 @@
         }
 
      
-    </style>
+    </style> -->
 
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7"></script>
 </head>
@@ -131,13 +133,15 @@
         </div>
     </section>
 
+    
+
     <section class="bg-grey" id="intro" style="height: 625px;">
         <div class="container" style="width: 1340px; ">
-            <div class="left-pic">
+            <div class="left-pic AnhDiVao1">
                 <img src="img/story.jpg">
             </div>
-            <div class="right-des">
-                <div id="introduce">
+            <div class="right-des AnhDiVao2">
+                <div id="introduce" >
                     <h2 class="heading-title">Our Story</h2>
 
                     <h3 style="color: #5AC0AB;">Công ty Dược phẩm và Dịch vụ chăm sóc sức khỏe MediLife</h3>
@@ -147,7 +151,7 @@
                 <div id="intro-row" style="width: 100%; height: max-content;">
                     <div id="mission">
                         <div class="custom-text-box">
-                            <h3 style="color: #5AC0AB;">Our Mission</h5>
+                            <h3 style="color: #5AC0AB;">Our Mission</h3>
 
                             <p class="content-text">Tại MediLife, sứ mạng của chúng tôi là trở thành đối tác tin cậy trong lĩnh vực chăm sóc sức khỏe, góp phần tích cực vào sức khỏe và sự phát triển toàn cầu.</p>
 
@@ -166,112 +170,39 @@
                     </div>
                     <div id="achieve">
                         <div class="custom-text-box ">
-                            <div class="counter-thumb"> 
-                                <div class="d-flex">
-                                    <!-- Đoạn mã HTML -->
-                                    <span class="counter-number" data-from="1" data-to="2009" data-speed="1000"></span>
-
-                                    <!-- Đoạn mã JavaScript -->
-                                    <script>
-                                        // Lấy tất cả các phần tử có lớp "counter-number"
-                                        const counters = document.querySelectorAll('.counter-number');
-
-                                        // Thực hiện hiệu ứng số đếm cho từng phần tử
-                                        counters.forEach(counter => {
-                                            const from = parseInt(counter.getAttribute('data-from'));
-                                            const to = parseInt(counter.getAttribute('data-to'));
-                                            const speed = parseInt(counter.getAttribute('data-speed'));
-
-                                            const countUp = new CountUp(counter, from, to, 0, speed);
-                                            if (!countUp.error) {
-                                                countUp.start();
-                                            } else {
-                                                console.error(countUp.error);
-                                            }
-                                        });
-                                    </script>
-
-                                    <span class="counter-number-text"></span>
+                            <div>
+                                <h3 style="color: #5AC0AB;">Những con số biết nói</h3>
+                            
+                                <div class="flex flex-col lg:flex-row items-center lg:justify-center">
+                                  <div id="city">
+                                    <div id="customer-count" class="achieve-num">
+                                      4,000
+                                    </div>
+                                    <div class="text-xl text-blue-200">khách hàng</div>
+                                  </div>
+                            
+                                  <div class="flex flex-col items-center mx-12 w-64 mb-12 lg:mb-0">
+                                    <div class="achieve-num" id="transaction-count">
+                                      8,000,000
+                                    </div>
+                                    <div class="text-xl text-blue-200">lượt mua hàng</div>
+                                  </div>
+                            
+                                  <!-- <div class="flex flex-col items-center mx-12 w-64 mb-12 lg:mb-0">
+                                    <div class="achieve-num" id="dollar-count">
+                                      14
+                                    </div>
+                                    <div class="text-xl text-blue-200">triệu dollar ủng hộ cho y tế toàn cầu</div>
+                                  </div> -->
                                 </div>
-
-                                <span class="counter-text">Founded</span>
-                            </div> 
-
-                            <div class="counter-thumb mt-4"> 
-                                <div class="d-flex">
-                                    <span class="counter-number" data-from="1" data-to="120" data-speed="1000"></span>
-                                    <span class="counter-number-text">B</span>
-                                </div>
-
-                                <span class="counter-text">Donations</span>
-                            </div> 
+                              </div>
                         </div>
                     </div>
                 </div>
                
             </div>
            
-            <!-- <div class="row">
-
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <img src="images/group-people-volunteering-foodbank-poor-people.jpg" class="custom-text-box-image img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="custom-text-box">
-                        <h2 class="mb-2">Our Story</h2>
-
-                        <h5 class="mb-3">Kind Heart Charity, Non-Profit Organization</h5>
-
-                        <p class="mb-0">This is a Bootstrap 5.2.2 CSS template for charity organization websites. You can feel free to use it. Please tell your friends about TemplateMo website. Thank you. HTML CSS files updated on 20 Oct 2022.</p>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="custom-text-box mb-lg-0">
-                                <h5 class="mb-3">Our Mission</h5>
-
-                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor quis metus</p>
-
-                                <ul class="custom-list mt-2">
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Charity Theme
-                                    </li>
-
-                                    <li class="custom-list-item d-flex">
-                                        <i class="bi-check custom-text-box-icon me-2"></i>
-                                        Semantic HTML
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
-                                <div class="counter-thumb"> 
-                                    <div class="d-flex">
-                                        <span class="counter-number" data-from="1" data-to="2009" data-speed="1000"></span>
-                                        <span class="counter-number-text"></span>
-                                    </div>
-
-                                    <span class="counter-text">Founded</span>
-                                </div> 
-
-                                <div class="counter-thumb mt-4"> 
-                                    <div class="d-flex">
-                                        <span class="counter-number" data-from="1" data-to="120" data-speed="1000"></span>
-                                        <span class="counter-number-text">B</span>
-                                    </div>
-
-                                    <span class="counter-text">Donations</span>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div> -->
+          
         </div>
        
     </section>
@@ -286,8 +217,7 @@
                 </div>
 
                 <div class="row" style="height: 550px;">
-                    <div class="left-des">
-        
+                    <div class="left-des AnhDiVao3" >
                         <h1 class="heading-title"> Dược phẩm chất lượng và an toàn, tuân thủ nghiêm ngặt các tiêu chuẩn quốc tế</h1>
                         <p class="content-text">Đội ngũ chuyên gia của chúng tôi luôn tận dụng sự sáng tạo
                              và nghiên cứu để phát triển các giải pháp y tế tiên tiến 
@@ -296,7 +226,7 @@
                         </p>
                     </div>
         
-                    <div class="right-pic">
+                    <div class="right-pic AnhDiVao4">
                         <img src="img/intro-thuoc.jpg" style="width: 95%; height: 90%; margin-left: 45px;">
                     </div>
                 </div>
@@ -352,7 +282,7 @@
 
    
 
-    <section class="section-padding" id="section_3" style="height: 680px;">
+    <section class="section-padding" id="section_3" style="height: 715px;">
         <div class="container" style="width: 1240px; margin: 0px auto;">
             <div class="heading-section">
                 <h2>
@@ -444,7 +374,7 @@
     </section>
     <!-- <div class="foot-div" style="height: 100px;">
     </div> -->
-    <footer style="margin-top: 40px;">
+    <footer style="margin-top: 100px;">
         <div class="container">
             <div class="row">
 
@@ -502,37 +432,58 @@
             </div>
         </div>
     </footer>
+    <script>
+    //     function animateNumber(finalNumber, delay, startNumber = 0, callback) {
+    //   let currentNumber = startNumber
+    //   const interval = window.setInterval(updateNumber, delay)
+    //   function updateNumber() {
+    //     if (currentNumber >= finalNumber) {
+    //       clearInterval(interval)
+    //     } else {
+    //       currentNumber++
+    //       callback(currentNumber)
+    //     }
+    //   }
+    // }
+    function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
+        let currentNumber = startNumber
+        const interval = window.setInterval(updateNumber, 17)
+        function updateNumber() {
+            if (currentNumber >= finalNumber) {
+            clearInterval(interval)
+            } else {
+            let inc = Math.ceil(finalNumber / (duration / 17))
+            if (currentNumber + inc > finalNumber) {
+                currentNumber = finalNumber
+                clearInterval(interval)
+            } else {
+                currentNumber += inc
+            }
+            callback(currentNumber)
+            }
+        }
+    }
+    
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      animateNumber(4000, 4000, 0, function (number) {
+        const formattedNumber = number.toLocaleString()
+        document.getElementById('customer-count').innerText = formattedNumber
+      })
+      
+      animateNumber(8000000, 4000, 0, function (number) {
+        const formattedNumber = number.toLocaleString()
+        document.getElementById('transaction-count').innerText = formattedNumber
+      })
+      
+      animateNumber(14, 4000, 0, function (number) {
+        const formattedNumber = number.toLocaleString()
+        document.getElementById('dollar-count').innerText = formattedNumber
+      })
+    })
+      </script>
 
-
-    <!-- <section id="welcome" class="bg-white section-padding" style="margin-top: 150px;">
-        <div class="container">
-            <div class="section-content">
-                <div class="row" style="height: 500px;">
-                    <div class="left-content">
-                        <img src="img/hoi an 2_1563176621 (1).jpg"
-                            style="width: 90%; margin: 100px 5px; border-radius: 10px;">
-                    </div>
-
-                    <div class="right-content">
-                        <h1 class="sec-title" style="color: orange; margin-top: 100px;">Cảm nhận hương vị Hội An từ cách
-                            xa hàng trăm cây số</h1>
-                        <span style="margin-left: 20px; width: 80%;">
-                            Có thể nói rằng ai đến phố cổ mà chưa được thưởng thức món cơm gà Hội An lừng danh thì xem
-                            như chưa được trải nghiệm trọn vẹn ẩm thực của mảnh đất miền Trung này.
-
-                            Nếu ẩm thực Huế được biết đến bởi nét tinh tế và điệu đà với vô vàn món ăn vừa đẹp vừa ngon
-                            và được chế biến theo phong cách cung đình thanh tao, ẩm thực miền Tây chiếm trọn cảm tình
-                            của nhiều người bởi hương vị ngọt ngào, gần gũi thì ẩm thực Hội An nói riêng và xứ Quảng nói
-                            chung lại không lẫn vào đâu được vì sự thô mộc, bình dị mà đậm đà mang đủ vị mặn mà ẩn chứa
-                            trong mỗi món ăn. Thật vậy, cơm gà Hội An được nhiều thực khách yêu thích bởi vì người tìm
-                            thấy được cái hồn xứ Quảng trong mỗi thành phần làm nên nó.
-                        </span>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section> -->
+    
 
 </body>
 </html>
