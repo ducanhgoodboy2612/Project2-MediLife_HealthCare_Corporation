@@ -8,7 +8,7 @@
   } */
   
   #table-content {
-    width: 76%;
+    width: 78%;
     min-height: 360px;
     float: left;
     
@@ -16,7 +16,7 @@
   
   #cart-total {
     height: 300px;
-    width: 22%;
+    width: 20%;
     border-radius: 20px;
     padding: 10px;
     float: right;
