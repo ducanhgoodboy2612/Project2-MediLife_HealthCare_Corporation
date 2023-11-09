@@ -1,3 +1,22 @@
+function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
+    let currentNumber = startNumber
+    const interval = window.setInterval(updateNumber, 17)
+    function updateNumber() {
+        if (currentNumber >= finalNumber) {
+        clearInterval(interval)
+        } else {
+        let inc = Math.ceil(finalNumber / (duration / 17))
+        if (currentNumber + inc > finalNumber) {
+            currentNumber = finalNumber
+            clearInterval(interval)
+        } else {
+            currentNumber += inc
+        }
+        callback(currentNumber)
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded',function(){
 
     var loadSPkm1 = document.querySelector('.AnhDiVao1');
@@ -6,12 +25,21 @@ document.addEventListener('DOMContentLoaded',function(){
     var loadSPkm4 = document.querySelector('.AnhDiVao4');
 
     window.addEventListener('scroll',function(){
-        if(window.pageYOffset > 1000 ){
+        if(window.pageYOffset > 500 ){
             console.log(this.window.pageYOffset);
             loadSPkm1.classList.add('Left1');
             loadSPkm2.classList.add('Left2');
+
+            animateNumber(4000, 3000, 0, function (number) {
+            const formattedNumber = number.toLocaleString()
+            document.getElementById('customer-count').innerText = formattedNumber
+            })
+            animateNumber(8000000, 3000, 0, function (number) {
+            const formattedNumber = number.toLocaleString()
+            document.getElementById('transaction-count').innerText = formattedNumber
+            })
         }
-        if(window.pageYOffset > 1500 ){
+        if(window.pageYOffset > 1200 ){
             loadSPkm3.classList.add('Right3');
             loadSPkm4.classList.add('Right4');
         }

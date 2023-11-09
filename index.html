@@ -16,6 +16,58 @@
     <script src="js/script.js"></script>
    
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7"></script>
+
+    <style>
+        #slideshow {
+        overflow: hidden;
+        height: 660px;
+        width: 1340px;
+        margin: 0 auto;
+        }
+
+        .slide-wrapper {
+        width: 100%;
+        display: flex;
+        -webkit-animation: slide 14s ease infinite;
+        }
+
+        .slide {
+        float: left;
+        height: 510px;
+        width: 100%;
+        }
+        .slide img{
+            width: 1340px;
+            height: 660px;
+        }
+
+
+        /* @-webkit-keyframes slide {
+        20% {margin-left: 0px;}
+        30% {margin-left: -728px;}
+        50% {margin-left: -728px;}
+        60% {margin-left: -1456px;}
+        80% {margin-left: -1456px;}
+        } */
+        @keyframes slide {
+  0% {
+    transform: translateX(0); /* Sử dụng thuộc tính transform để chuyển slide */
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  /* 80% {
+    transform: translateX(-400%);
+  } */
+}
+    </style>
+
 </head>
 <body style=" font-size: 16dp; color: #292424;">
     <section class="header">
@@ -31,6 +83,9 @@
 
                         <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
                         <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+                        <!-- <div class="my_btn">
+                            <a href="#"><span>Đổi mật khẩu</span></a>
+                        </div> -->
                         <div style="height: 80px; width: 180px; float: right;">
                             <button class="small-btn" >
                                 <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
@@ -47,14 +102,32 @@
                 </div>
             </div>
             <div id="slideshow">
-                <img id="slide" src="img/slide1.png">
+                <div class="slide-wrapper">
+                    <div class="slide"><img src="img/slide1.jpg"></div>
+                    <div class="slide"><img src="img/slide2.jpg"></div>
+                    <div class="slide"><img src="img/slide3.jpg"></div>
+                    <div class="slide"><img src="img/slide4-1.jpg"></div>
+
+                </div>
+                <!-- <button id="slide-prev" onclick="back()">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <button id="slide-next" onclick="moveSlide(1)">
+                    <i class="fa fa-angle-right"></i>
+                </button> -->
+            </div>
+            <!-- <div id="slideshow">
+                <divclass="slide-wrapper">
+                    <img id="slide" src="img/slide1.png">
+
+                </div>
                 <button id="slide-prev" onclick="back()">
                     <i class="fa fa-angle-left"></i>
                 </button>
                 <button id="slide-next" onclick="next()">
                     <i class="fa fa-angle-right"></i>
                 </button>
-            </div>
+            </div> -->
             <script>
                 autoplay();
             </script>
@@ -319,8 +392,15 @@
               </div>
         </div>
     </section>
+    <section id="intro3" class="bg-white" style="height: 400px;">
+        <div class="container" style="width: 1140px; margin: 0px auto;">
+          <img id="banner-pic" style="width: 100%;" src="img/repeat-mediction-750-x-352.jpg" alt="Consult">
+    
+        </div>
+    </section>
 
-    <section id="reservation" style="background-image: url(img/reser.jpg);">
+    <section id="reservation">
+        <div class="container" style="background-image: url(img/reser.jpg);">
         <div id="reser-form" style="background-color: transparent; padding-top: 10px;">
             <div class="heading-section">
 
@@ -354,6 +434,7 @@
                 </div>
             </form>
         </div>
+    </div>
     </section>
     <!-- <div class="foot-div" style="height: 100px;">
     </div> -->
@@ -415,58 +496,5 @@
             </div>
         </div>
     </footer>
-    <script>
-    //     function animateNumber(finalNumber, delay, startNumber = 0, callback) {
-    //   let currentNumber = startNumber
-    //   const interval = window.setInterval(updateNumber, delay)
-    //   function updateNumber() {
-    //     if (currentNumber >= finalNumber) {
-    //       clearInterval(interval)
-    //     } else {
-    //       currentNumber++
-    //       callback(currentNumber)
-    //     }
-    //   }
-    // }
-    function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
-        let currentNumber = startNumber
-        const interval = window.setInterval(updateNumber, 17)
-        function updateNumber() {
-            if (currentNumber >= finalNumber) {
-            clearInterval(interval)
-            } else {
-            let inc = Math.ceil(finalNumber / (duration / 17))
-            if (currentNumber + inc > finalNumber) {
-                currentNumber = finalNumber
-                clearInterval(interval)
-            } else {
-                currentNumber += inc
-            }
-            callback(currentNumber)
-            }
-        }
-    }
-    
-    
-    document.addEventListener('DOMContentLoaded', function () {
-      animateNumber(4000, 4000, 0, function (number) {
-        const formattedNumber = number.toLocaleString()
-        document.getElementById('customer-count').innerText = formattedNumber
-      })
-      
-      animateNumber(8000000, 4000, 0, function (number) {
-        const formattedNumber = number.toLocaleString()
-        document.getElementById('transaction-count').innerText = formattedNumber
-      })
-      
-      animateNumber(14, 4000, 0, function (number) {
-        const formattedNumber = number.toLocaleString()
-        document.getElementById('dollar-count').innerText = formattedNumber
-      })
-    })
-      </script>
-
-    
-
 </body>
 </html>

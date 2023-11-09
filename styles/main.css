@@ -227,23 +227,109 @@ button:focus {
 #menu-bar ul li a {
   text-decoration: none;
 }
+.my-btn{
+  width: 140px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  margin-top: 35px;
+}
+.my_btn a{
+  display: block;
+  width: 120px;
+  float: right;
+  margin-top: 50px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  font-family: sans-serif;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #5BC2AE;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
 
+.my_btn a span{
+  position: relative;
+  z-index: 2;
+}
+
+.my_btn a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #5BC2AE;
+  transition: all .35s;
+}
+
+.my_btn a:hover{
+  color: #fff;
+}
+
+.my_btn a:hover:after{
+  width: 100%;
+}
+#menu-btn{
+  width: 140px;
+  height: 40px;
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  border-radius: 5px;
+  font-size:16px;
+  padding:7px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+#menu-btn:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+#menu-btn:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+#menu-btn:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+#menu-btn:hover:before,#menu-btn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
 #menu-btn {
   width: 140px;
   height: 40px;
-  background-color: transparent;
+  /* background-color: transparent;
   color: #2B7A0B;
   font-size: large;
   box-shadow: 20px;
   border-radius: 20px;
-  border: 2px solid #2B7A0B;
+  border: 2px solid #2B7A0B; */
 }
 
-#menu-btn:hover {
+/* #menu-btn:hover {
   background-color: #5AC0AB;
   color: black;
   cursor: pointer;
-}
+} */
 
 .small-btn {
   height: 40px;
@@ -277,20 +363,18 @@ button:focus {
 
 }
 
-#slideshow {
+/* #slideshow {
   position: relative;
   overflow: hidden;
 }
 
 #slideshow img {
-  /* height: 500px;
-  
-    width: 1333px; */
+
   width: 100%;
   height: 660px;
   margin-top: 80px;
   transition: transform 1s ease-in-out;
-}
+} */
 
 #slide-prev {
   height: 50px;
@@ -702,9 +786,16 @@ button:focus {
 }
 
 #reservation {
-  height: 630px;
+  height: 650px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#reservation .container{
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1340px; 
+  height: 630px;
+  margin: 0px auto; 
 }
 
 .form-control {

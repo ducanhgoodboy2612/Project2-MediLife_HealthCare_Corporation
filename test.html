@@ -3,66 +3,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script>
-    function animateNumber(finalNumber, delay, startNumber = 0, callback) {
-  let currentNumber = startNumber
-  const interval = window.setInterval(updateNumber, delay)
-  function updateNumber() {
-    if (currentNumber >= finalNumber) {
-      clearInterval(interval)
-    } else {
-      currentNumber++
-      callback(currentNumber)
-    }
-  }
+  <style>
+ body {
+  padding: 2%;
+  text-align: center;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  animateNumber(4000000, 1, 0, function (number) {
-    const formattedNumber = number.toLocaleString()
-    document.getElementById('transaction-count').innerText = formattedNumber
-  })
-  
-  animateNumber(98, 50, 0, function (number) {
-    const formattedNumber = number.toLocaleString()
-    document.getElementById('city-count').innerText = formattedNumber
-  })
-  
-  animateNumber(1500, 10, 0, function (number) {
-    const formattedNumber = number.toLocaleString()
-    document.getElementById('customer-count').innerText = formattedNumber
-  })
-})
-  </script>
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+
+.slide-wrapper {
+  width: 2912px;
+  -webkit-animation: slide 14s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+
+
+@-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -728px;}
+  50% {margin-left: -728px;}
+  60% {margin-left: -1456px;}
+  80% {margin-left: -1456px;}
+}
+
+  </style>
+
 </head>
 <body>
-  <div class="my-8 py-24 bg-blue-600">
-    <div class="text-white font-hairline text-2xl text-center text-blue-100 mb-16">
-      Những con số biết nói
-    </div>
-
-    <div class="flex flex-col lg:flex-row items-center lg:justify-center">
-      <div class="flex flex-col items-center mx-12 w-64 mb-12 lg:mb-0">
-        <div class="text-6xl font-extrabold text-white mb-6" id="transaction-count">
-          4,000,000
-        </div>
-        <div class="text-xl text-blue-200">lượt giao dịch</div>
-      </div>
-
-      <div class="flex flex-col items-center mx-12 w-64 mb-12 lg:mb-0">
-        <div class="text-6xl font-extrabold text-white mb-6" id="city-count">
-          98
-        </div>
-        <div class="text-xl text-blue-200">thành phố</div>
-      </div>
-
-      <div class="flex flex-col items-center mx-12 w-64 mb-12 lg:mb-0">
-        <div class="text-6xl font-extrabold text-white mb-6">
-          1,500
-        </div>
-        <div class="text-xl text-blue-200">khách hàng</div>
-      </div>
-    </div>
+  <h3>Tạo slideshow bằng HTML Và CSS</h3>
+<div id="slideshow">
+  <div class="slide-wrapper">
+    <div class="slide"><img src="https://images.pexels.com/photos/2382325/pexels-photo-2382325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
+    <div class="slide"><img src="https://images.pexels.com/photos/3578393/pexels-photo-3578393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
+    <div class="slide"><img src="https://images.pexels.com/photos/4484184/pexels-photo-4484184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
   </div>
+</div>
+<!-- 
+
+  <script>
+    //khai báo biến slideIndex đại diện cho slide hiện tại
+    var slideIndex;
+    // KHai bào hàm hiển thị slide
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+   
+        slides[slideIndex].style.display = "block";  
+        dots[slideIndex].className += " active";
+        //chuyển đến slide tiếp theo
+        slideIndex++;
+        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+        if (slideIndex > slides.length - 1) {
+          slideIndex = 0
+        }    
+        //tự động chuyển đổi slide sau 5s
+        setTimeout(showSlides, 5000);
+    }
+    //mặc định hiển thị slide đầu tiên 
+    showSlides(slideIndex = 0);
+   
+   
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+  </script> -->
 </body>
 </html>
