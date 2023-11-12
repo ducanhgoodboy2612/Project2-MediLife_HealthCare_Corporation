@@ -13,14 +13,14 @@
   <body>
     <div class="container">
         <img src="img/logo.png" style="width: 50px; height: 50px;">
-      <form action="#">
+      <form id="loginForm" action="#">
         <div class="title">Đăng nhập</div>
         <div class="input-box underline">
-          <input type="text" placeholder="Email hoặc SĐT" required>
+          <input type="text" id="email" placeholder="Email hoặc SĐT" required>
           <div class="underline"></div>
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Mật khẩu" required>
+          <input type="password" id="password" placeholder="Mật khẩu" required>
           <div class="underline"></div>
         </div>
         <div class="input-box button">
@@ -37,5 +37,7 @@
         <div>Chưa có tài khoản ? </div>
         <a id="register" href="signup.html" >Đăng ký ngay</a>
     </div>
+    <script type="text/javascript" src="js/login.js"></script>
+   
   </body>
 </html>

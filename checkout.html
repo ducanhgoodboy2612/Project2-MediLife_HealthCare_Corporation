@@ -25,7 +25,7 @@
 
                 <div id="menu-bar">
                     <ul>
-                        <li><a class="mnbar-item active" onclick="selectMenuItem(this)">Trang chủ</a></li>
+                        <li><a class="mnbar-item" onclick="selectMenuItem(this)">Trang chủ</a></li>
                         <li><a class="mnbar-item" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
 
                         <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
@@ -155,7 +155,8 @@
         
             var cartTotal = sessionStorage.getItem("cartTotal");
             $("#subtotal").text(cartTotal.toString() + ".000 đ");
-            $("#total").text(cartTotal.toString() + ".000 đ");
+            var total = parseInt(cartTotal) + 30;
+            $("#total").text(total.toString() + ".000 đ");
         });
     </script>
 </body>

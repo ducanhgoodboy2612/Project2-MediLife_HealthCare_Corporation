@@ -116,7 +116,7 @@ function inc(btn) {
     var id = parseInt(itemId);
 
     var cart = sessionStorage.getItem("local-cart");
-    var cartProducts = JSON.parse(cart || "[]"); // Parse the cart or initialize as an empty array if it's null or invalid JSON
+    var cartProducts = JSON.parse(cart || "[]"); 
 
     var amount = cartProducts.length;
     for (var i = 0; i < amount; i++) {
