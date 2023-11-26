@@ -107,7 +107,7 @@ function LoadInvoice()
             <td>`+x.price+`</td>
             <td>`+x.quantity+`</td>
             <td>`+x.price * x.quantity+`</td>
-            <td><i onclick="EditII(`+ x.bill_id+ `)" class="fa-solid fa-pen-to-square"></i>   <i onclick="RemoveInvoiceInput(`+ x.mahd+ `)" class="fa-solid fa-trash-can"></i></td>
+            <td><i onclick="EditII(`+ x.bill_id+ `)" class="fa-solid fa-pen-to-square"></i>   <i onclick="RemoveII(`+ x.bill_id+ `)" class="fa-solid fa-trash-can"></i></td>
             </tr>`;
         }
         else
@@ -123,7 +123,7 @@ function LoadInvoice()
             <td>`+x.price+`</td>
             <td>`+x.quantity+`</td>
             <td>`+x.price * x.quantity+`</td>
-            <td><i onclick="EditII(`+ x.mahd+ `)" class="fa-solid fa-pen-to-square"></i>   <i onclick="RemoveII(`+ x.mahd+ `)" class="fa-solid fa-trash-can"></i></td>
+            <td><i onclick="EditII(`+ x.mahd+ `)" class="fa-solid fa-pen-to-square"></i>   <i onclick="RemoveII(`+ x.bill_id+ `)" class="fa-solid fa-trash-can"></i></td>
             </tr>`;
         }
         
@@ -192,8 +192,10 @@ function UpdateII()
 function RemoveII(bill_id){
     var index=list_ii.findIndex( x => x.bill_id == bill_id);
   if(index >=0 ){
+   
     list_ii.splice(index,1);
   }
-  LoadProduct();
+  LoadInvoice();
+  localStorage.setItem('import_invoice',JSON.stringify(list_ii));
   alert("Xóa thành công.");
 }

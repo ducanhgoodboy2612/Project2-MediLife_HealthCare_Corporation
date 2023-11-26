@@ -33,8 +33,11 @@ function inc(btn) {
     var numtxt = row.querySelector('input[type="text"]');
     var currentValue = parseInt(numtxt.value);
     var newValue = currentValue - 1;
+    var c = 0;
     if (newValue < 1) {
       newValue = 1;
+      c = 1;
+      return;
     }
     numtxt.value = newValue;
     var price = parseInt(row.querySelector('td:nth-child(4)').textContent);
@@ -48,7 +51,7 @@ function inc(btn) {
 
     const formattedTotal = formatter.format(total) + ' đ';
     row.querySelector('#total').textContent = formattedTotal.replace("₫", "");
-
+   
     cartTotal -= price;
     updateSubtotal();
   }

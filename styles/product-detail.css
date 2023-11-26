@@ -206,9 +206,15 @@ input.round-btn {
     margin-top: 3px;
 }
 
-.comment .box .ratio .progressBar .percentage {
+.comment .box .ratio .progressBar .percentage5 {
     background-color: #ffb400;
-    width: 100%;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+}
+.comment .box .ratio .progressBar .percentage4 {
+    background-color: #ffb400;
+    width: 10%;
     height: 100%;
     border-radius: 5px;
 }

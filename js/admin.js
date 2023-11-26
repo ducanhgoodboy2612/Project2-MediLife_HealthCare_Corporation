@@ -233,19 +233,19 @@ function Uncomfirm_Invoice()
     listclick[6].className += " clickhh"
     listpage[6].style.display='block'
 }
-function CXL()
-{
-    for(let x of listpage)
-    {
-        x.style.display='none'
-    }
-    for(let y of listclick)
-    {
-        y.className = y.className.replace(" clickhh","")
-    }
-    listclick[7].className += " clickhh"
-    listpage[7].style.display='block'
-}
+// function CXL()
+// {
+//     for(let x of listpage)
+//     {
+//         x.style.display='none'
+//     }
+//     for(let y of listclick)
+//     {
+//         y.className = y.className.replace(" clickhh","")
+//     }
+//     listclick[7].className += " clickhh"
+//     listpage[7].style.display='block'
+// }
 function OpenAddCategory(){
     Refresh();
     alert('OpenAdd');
@@ -261,20 +261,20 @@ function ExitCate(){
     $('.note').text(' ')
 }
 //Category
-listcompany=JSON.parse(localStorage.getItem('category')) || [] ;
+list_cate=JSON.parse(localStorage.getItem('category')) || [] ;
 function AddCategory(){
     alert("Addf");
     var tenh=$('#tendm').val();
     var motah=$('#mota').val();
     var mah=0;
     var kt=true;
-    if(listcompany=="")
+    if(list_cate=="")
     {
         mah=1;
     }
     else
     {
-        mah=Number(listcompany[listcompany.length-1]['madm'])+1;
+        mah=Number(list_cate[list_cate.length-1]['madm'])+1;
     }
     if (tenh == "") 
     {
@@ -293,8 +293,8 @@ function AddCategory(){
             "tendm": tenh,
             "mota":motah
         };
-        listcompany.push(totalll);
-        localStorage.setItem("category",JSON.stringify(listcompany));
+        list_cate.push(totalll);
+        localStorage.setItem("category",JSON.stringify(list_cate));
         LoadCategory();
        Refresh();
        alert("Bạn đã thêm thành công")
@@ -304,16 +304,16 @@ function AddCategory(){
 
 function Refresh()
 {
-    if(listcompany =="")
+    if(list_cate =="")
     {
         $('#madm').val("MDM01");
     }
-    else if(Number(listcompany[listcompany.length-1]['mahang'])+1<10)
+    else if(Number(list_cate[list_cate.length-1]['mahang'])+1<10)
     {
-        $('#madm').val("MDM0"+(Number(listcompany[listcompany.length-1]['madm'])+1));
+        $('#madm').val("MDM0"+(Number(list_cate[list_cate.length-1]['madm'])+1));
     }
     else
-        $('#madm').val("MDM"+(Number(listcompany[listcompany.length-1]['madm'])+1));
+        $('#madm').val("MDM"+(Number(list_cate[list_cate.length-1]['madm'])+1));
     $('#tendm').val("")
     $('#mota').val("")
 }
@@ -329,7 +329,7 @@ function LoadCategory()
             <th>Tác vụ</th>
         </tr>`;
     var strr=""
-    for(x of listcompany)
+    for(x of list_cate)
     {
         stt=stt+1;
         if(stt<10)
@@ -362,26 +362,27 @@ function LoadCategory()
 LoadCategory();
 
 function RemoveCate(madm){
-    var index=listcompany.findIndex( x => x.madm == madm);
+    var index=list_cate.findIndex( x => x.madm == madm);
   if(index >=0 ){
-    listcompany.splice(index,1);
+    list_cate.splice(index,1);
   }
+  localStorage.setItem("category",JSON.stringify(list_cate));
   LoadCategory();
   alert("Xóa thành công.");
 }
 // function UpdateCompany()
 // {
-//     localStorage.setItem('category',JSON.stringify(listcompany));
+//     localStorage.setItem('category',JSON.stringify(list_cate));
 //     alert("Cập nhập thành công");
 //     LoadCategory();
 // }
 function EditCate(madm)
 {
-    var index=listcompany.findIndex( x => x.madm == madm);
+    var index=list_cate.findIndex( x => x.madm == madm);
     OpenAddCategory();
-    $('#madm').val(listcompany[index]['madm']);
-    $('#tendm').val(listcompany[index]['tendm']);
-    $('#mota').val(listcompany[index]['mota'])
+    $('#madm').val(list_cate[index]['madm']);
+    $('#tendm').val(list_cate[index]['tendm']);
+    $('#mota').val(list_cate[index]['mota'])
 }
 function UpdateCate()
 {
@@ -400,13 +401,13 @@ function UpdateCate()
     }
     if(ok==true)
     {
-        for(x of listcompany)
+        for(x of list_cate)
         {
             if(x.madm==$('#madm').val())
             {
                 x.tendm=ten;
                 x.mota=mota;
-                localStorage.setItem('category',JSON.stringify(listcompany));
+                localStorage.setItem('category',JSON.stringify(list_cate));
                 alert("Cập nhập thành công");
                 LoadCategory();
                 

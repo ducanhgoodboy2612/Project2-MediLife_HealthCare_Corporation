@@ -23,9 +23,10 @@ document.addEventListener('DOMContentLoaded',function(){
     var loadSPkm2 = document.querySelector('.AnhDiVao2');
     var loadSPkm3 = document.querySelector('.AnhDiVao3');
     var loadSPkm4 = document.querySelector('.AnhDiVao4');
+    let c = true;
 
     window.addEventListener('scroll',function(){
-        if(window.pageYOffset > 500 ){
+        if(window.pageYOffset > 500 && c){
             console.log(this.window.pageYOffset);
             loadSPkm1.classList.add('Left1');
             loadSPkm2.classList.add('Left2');
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded',function(){
             const formattedNumber = number.toLocaleString()
             document.getElementById('transaction-count').innerText = formattedNumber
             })
+            c = false;
         }
         if(window.pageYOffset > 1200 ){
             loadSPkm3.classList.add('Right3');

@@ -78,7 +78,7 @@ function AddProduct(){
 function LoadProduct()
 {
     var stt=0;
-    var strrr=`<tr>
+    var header=`<tr>
             <th><input type="checkbox"></th>
             <th>STT</th>
             <th>Mã thuốc</th>
@@ -87,11 +87,11 @@ function LoadProduct()
             <th>Mô tả</th>
             <th>Tác vụ</th>
         </tr>`;
-    var strr=""
+    var body=""
     for(x of list_medicine)
     {
         stt=stt+1;
-        strr += `<tr>
+        body += `<tr>
         <td><input type="checkbox"></td>
         <td>`+stt+`</td>
         <td> MT0`+x.mathuoc+`</td>
@@ -102,10 +102,69 @@ function LoadProduct()
         </tr>`;
         
     }
-    var str = strrr+ strr;
+    var str = header+ body;
     $("#product").html(str);
 }
 LoadProduct();
+
+function searchProducts() {
+    var searchCode = document.getElementById('searchCode').value.toLowerCase();
+    var searchName = document.getElementById('searchName').value.toLowerCase();
+   
+    var filteredProducts;
+
+    if (searchCode && !searchName) {
+        filteredProducts = list_medicine.filter(function(product) {
+            return product.mathuoc.toString().toLowerCase().includes(searchCode);
+        });
+    } else if (!searchCode && searchName) {
+        filteredProducts = list_medicine.filter(function(product) {
+            return product.tenthuoc.toLowerCase().includes(searchName);
+        });
+    } else if (searchCode && searchName) {
+        filteredProducts = list_medicine.filter(function(product) {
+            var codeMatch = product.mathuoc.toString().toLowerCase().includes(searchCode);
+            var nameMatch = product.tenthuoc.toLowerCase().includes(searchName);
+            return codeMatch && nameMatch;
+        });
+    } else {
+   
+        LoadProduct();
+        return;
+    }
+    alert(JSON.stringify(filteredProducts));
+
+    displayFilteredProducts(filteredProducts);
+}
+
+function displayFilteredProducts(products) {
+    var stt=0;
+    var header=`<tr>
+            <th><input type="checkbox"></th>
+            <th>STT</th>
+            <th>Mã thuốc</th>
+            <th>Tên thuốc</th>
+            <th>Giá bán</th>
+            <th>Mô tả</th>
+            <th>Tác vụ</th>
+        </tr>`;
+    var body=""
+    for (x of products) {
+        stt=stt+1;
+        body += `<tr>
+        <td><input type="checkbox"></td>
+        <td>`+stt+`</td>
+        <td> MT0`+x.mathuoc+`</td>
+        <td>`+x.tenthuoc+`</td>
+        <td>`+x.giaban+`đ</td>
+        <td>`+x.mota+`</td>
+        <td><i onclick="EditPro(`+ x.mathuoc+ `)" class="fa-solid fa-pen-to-square"></i>   <i onclick="RemovePro(`+ x.mathuoc+ `)" class="fa-solid fa-trash-can"></i></td>
+        </tr>`;
+    }
+    var str = header + body;
+    $("#product").html(str);
+}
+
 
 function EditPro(mathuoc)
 {
@@ -161,6 +220,7 @@ function RemovePro(mathuoc){
   if(index >=0 ){
     list_medicine.splice(index,1);
   }
+  localStorage.setItem('product',JSON.stringify(list_medicine));
   LoadProduct();
   alert("Xóa thành công.");
 }

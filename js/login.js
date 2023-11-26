@@ -11,10 +11,10 @@ function handleLoginFormSubmit(event) {
         var infos = JSON.parse(user_info || "[]"); 
 
         var amount = infos.length;
-        alert("amo: " + amount);
+        
         for (var i = 0; i < amount; i++) {
             var user = infos[i];
-            alert(user.email);
+   
             if(email === user.email && password === user.pass){
             window.location.href = 'index.html';
                 alert("Đăng nhập thành công.");
