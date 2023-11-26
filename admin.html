@@ -204,7 +204,7 @@
                             </tr>
                             <tr>
                                 <td>Tên nhân viên  </td>
-                                <td id="tenhome">Phạm Danh Khoa</td>
+                                <td id="tenhome">Phạm Đình Danh Khoa</td>
                             </tr>
                             <tr>
                                 <td>Email  </td>
@@ -446,15 +446,15 @@
                         <a>Quản lý danh mục thuốc</a>
                         <button onclick="OpenAddCategory()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
-                    <div class="searchCP">
+                    <div class="search_head">
                         Tìm kiếm
                     </div>
-                    <div class="searchCPdetail">
-                        <div class="searchCP1">
+                    <div class="search_box">
+                        <div class="search_input">
                             <span>Mã DM </span>
                         <input type="text" >
                         </div>
-                        <div class="searchCP1">
+                        <div class="search_input">
                             <span>Tên DM</span>
                         <input type="text" >
                         </div>
@@ -478,15 +478,15 @@
                         <a>Quản lý dòng máy tính</a>
                         <button onclick="OpenAddDongMT()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
-                    <div class="searchCP">
+                    <div class="search_head">
                         Tìm kiếm
                     </div>
-                    <div class="searchCPdetail">
-                        <div class="searchCP1">
+                    <div class="search_box">
+                        <div class="search_input">
                             <span>Mã dòng máy tính</span>
                         <input type="text" id="textDMTMa" >
                         </div>
-                        <div class="searchCP1">
+                        <div class="search_input">
                             <span>Tên dòng máy tính</span>
                         <input type="text" id="textDMTT" >
                         </div>
@@ -511,19 +511,20 @@
                         <a>Quản lý sản phẩm</a>
                         <button onclick="OpenAddProduct()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
-                    <div class="searchCP">
+                    <div class="search_head">
                         Tìm kiếm
                     </div>
-                    <div class="searchCPdetail">
-                        <div class="searchCP1">
+                    <div class="search_box">
+                        <div class="search_input">
                             <span>Mã thuốc</span>
                             <input type="text" id="searchCode">
                         </div>
-                        <div class="searchCP1">
+                        <div class="search_input">
                             <span>Tên thuốc</span>
                             <input type="text" id="searchName">
 
                         </div>
+                     
                         <button onclick="searchProducts()"><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
                     </div>
                     <div class="company_details">
@@ -534,7 +535,7 @@
                             <table  id="product">
                             </table>
                         </div>
-                        
+                        <button onclick="LoadProduct()" id="btn_showAll"><i class="fa-regular fas fa-clipboard-list"></i>  Hiển thị tất cả </button>
                     </div>
                 </div>
                 <div class="brand_manage Page">
@@ -544,15 +545,15 @@
                         <a>Thương hiệu thuốc</a>
                         <button id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
-                    <div class="searchCP">
+                    <div class="search_head">
                         Tìm kiếm
                     </div>
-                    <div class="searchCPdetail">
-                        <div class="searchCP1">
+                    <div class="search_box">
+                        <div class="search_input">
                             <span>Mã thương hiệu</span>
                         <input type="text" >
                         </div>
-                        <div class="searchCP1">
+                        <div class="search_input">
                             <span>Tên thương hiệu</span>
                         <input type="text" >
                         </div>
@@ -606,15 +607,15 @@
                         <a>Quản lý hóa đơn nhập</a>
                         <button onclick="OpenImportInvoice()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
-                    <div class="searchCP">
+                    <div class="search_head">
                         Tìm kiếm
                     </div>
-                    <div class="searchCPdetail">
-                        <div class="searchCP1">
+                    <div class="search_box">
+                        <div class="search_input">
                             <span>Mã hóa đơn</span>
                         <input type="text" >
                         </div>
-                        <div class="searchCP1">
+                        <div class="search_input">
                             <span>Ngày lập</span>
                         <input type="text" >
                         </div>
@@ -638,15 +639,15 @@
                         <a>Quản lý đơn hàng chưa xử lý</a>
                         <button  id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
-                    <div class="searchCP">
+                    <div class="search_head">
                         Tìm kiếm
                     </div>
-                    <div class="searchCPdetail">
-                        <div class="searchCP1">
+                    <div class="search_box">
+                        <div class="search_input">
                             <span>Mã đơn hàng</span>
                         <input type="text" >
                         </div>
-                        <div class="searchCP1">
+                        <div class="search_input">
                             <span>Tên đơn hàng</span>
                         <input type="text" >
                         </div>

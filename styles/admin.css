@@ -334,19 +334,19 @@ i {
     font-weight: 500;
    
 }
- .searchCP{
+ .search_head{
     padding-left: 20px;
     line-height: 30px;
     background-color: #dee2de;
     margin-top: 3px;
 }
- .searchCPdetail{
+ .search_box{
     border-bottom: 1px solid rgb(224, 222, 222);
     border-right: 1px solid rgb(224, 222, 222);
     border-top: 1px solid rgb(224, 222, 222);
 
 }
-  .searchCP1{
+  .search_input{
     display: flex;
     width: 50%;
     padding-top: 20px;
@@ -354,22 +354,22 @@ i {
     line-height: 25px;
 
 }
-  .searchCP1 span{
+  .search_input span{
     width: 20%;
     font-weight: 600;
     color: #5BC2AE;
 }
-  .searchCP1 input{
+  .search_input input{
     width: 80%;
     border: 1px solid rgb(44, 150, 44);
     border-radius: 3px;
 }
-  .searchCP1 #mota{
+  .search_input #mota{
     width: 80%;
     border: 1px solid rgb(44, 150, 44);
     border-radius: 3px;
 }
- .searchCPdetail button{
+ .search_box button{
     width: 100px;
     line-height: 28px;
     margin-left:40%;
@@ -380,6 +380,37 @@ i {
     color: white;
     margin-bottom: 20px;
 
+}
+#btn_showAll{
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #35973d;
+  float: right;
+  margin-right: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  color: white;
+}
+#btn_showAll:hover{
+  cursor: pointer;
+}
+.button-wrapper {
+    float: right; /* Aligns the wrapper to the right */
+    margin-right: 20px; /* Adjust as needed */
+    display: flex;
+}
+
+.custom-btn {
+    background-color: rgb(13, 230, 136);
+    border: none;
+    line-height: 25px;
+    border-radius: 3px;
+    color: rgb(32, 32, 25);
+    font-weight: 500;
+    margin-left: 10px; /* Adjust spacing between buttons */
 }
  .company_details{
     margin-top: 10px;
@@ -706,19 +737,19 @@ i {
      font-weight: 500;
     
  }
-   .searchCP{
+   .search_head{
      padding-left: 20px;
      line-height: 30px;
      background-color: #dee2de;
      margin-top: 3px;
  }
-   .searchCPdetail{
+   .search_box{
      border-bottom: 1px solid rgb(224, 222, 222);
      border-right: 1px solid rgb(224, 222, 222);
      border-top: 1px solid rgb(224, 222, 222);
  
  }
-    .searchCP1{
+    .search_input{
      display: flex;
      width: 50%;
      padding-top: 20px;
@@ -726,24 +757,24 @@ i {
      line-height: 25px;
  
  }
-    .searchCP1 span{
+    .search_input span{
      width: 30%;
      font-weight: 600;
      color: #5BC2AE;
  }
-    .searchCP1 input{
+    .search_input input{
      width: 70%;
      border: 1px solid rgb(44, 150, 44);
      border-radius: 3px;
      outline: none;
      padding: 5px;
  }
-    .searchCP1 #mota{
+    .search_input #mota{
      width: 80%;
      border: 1px solid rgb(44, 150, 44);
      border-radius: 3px;
  }
-   .searchCPdetail button{
+   .search_box button{
      width: 100px;
      line-height: 25px;
      margin-left:60.5%;
