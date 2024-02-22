@@ -1,88 +1,87 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <style>
- body {
-  padding: 2%;
-  text-align: center;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-#slideshow {
-  overflow: hidden;
-  height: 510px;
-  width: 728px;
-  margin: 0 auto;
-}
+    body {
+      height: 100vh;
+      background-color: #0d234b;
+      color: #fff;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.slide-wrapper {
-  width: 2912px;
-  -webkit-animation: slide 14s ease infinite;
-}
+    .star-rating {
+      white-space: nowrap;
+    }
 
-.slide {
-  float: left;
-  height: 510px;
-  width: 728px;
-}
+    .star-rating [type="radio"] {
+      appearance: none;
+    }
 
+    .star-rating i {
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
 
-@-webkit-keyframes slide {
-  20% {margin-left: 0px;}
-  30% {margin-left: -728px;}
-  50% {margin-left: -728px;}
-  60% {margin-left: -1456px;}
-  80% {margin-left: -1456px;}
-}
+    .star-rating label:is(:hover, :has(~ :hover)) i {
+      cursor: pointer;
+      transform: scale(1.35);
+      color: #fffdba;
+      animation: jump 0.5s calc(0.3s + (var(--i) - 1) * 0.15s) alternate infinite;
+    }
 
+    .star-rating label:has(~ :checked) i {
+      color: #faec1b;
+      text-shadow: 0 0 2px #ffffff, 0 0 10px #ffee58;
+    }
+
+    @keyframes jump {
+
+      0%,
+      50% {
+        transform: translatey(0) scale(1.35);
+      }
+
+      100% {
+        transform: translatey(-15%) scale(1.35);
+      }
+    }
   </style>
 
 </head>
+
 <body>
   <h3>Tạo slideshow bằng HTML Và CSS</h3>
-<div id="slideshow">
-  <div class="slide-wrapper">
-    <div class="slide"><img src="https://images.pexels.com/photos/2382325/pexels-photo-2382325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
-    <div class="slide"><img src="https://images.pexels.com/photos/3578393/pexels-photo-3578393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
-    <div class="slide"><img src="https://images.pexels.com/photos/4484184/pexels-photo-4484184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
-  </div>
-</div>
-<!-- 
-
-  <script>
-    //khai báo biến slideIndex đại diện cho slide hiện tại
-    var slideIndex;
-    // KHai bào hàm hiển thị slide
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-           slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-   
-        slides[slideIndex].style.display = "block";  
-        dots[slideIndex].className += " active";
-        //chuyển đến slide tiếp theo
-        slideIndex++;
-        //nếu đang ở slide cuối cùng thì chuyển về slide đầu
-        if (slideIndex > slides.length - 1) {
-          slideIndex = 0
-        }    
-        //tự động chuyển đổi slide sau 5s
-        setTimeout(showSlides, 5000);
-    }
-    //mặc định hiển thị slide đầu tiên 
-    showSlides(slideIndex = 0);
-   
-   
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-  </script> -->
+  <p>Rating: <span class="star-rating">
+      <label for="rate-1" style="--i:1"><i class="fas fa-star"></i></label>
+      <input type="radio" name="rating" id="rate-1" value="1">
+      <label for="rate-2" style="--i:2"><i class="fas fa-star"></i></label>
+      <input type="radio" name="rating" id="rate-2" value="2" checked>
+      <label for="rate-3" style="--i:3"><i class="fas fa-star"></i></label>
+      <input type="radio" name="rating" id="rate-3" value="3">
+      <label for="rate-4" style="--i:4"><i class="fas fa-star"></i></label>
+      <input type="radio" name="rating" id="rate-4" value="4">
+      <label for="rate-5" style="--i:5"><i class="fas fa-star"></i></label>
+      <input type="radio" name="rating" id="rate-5" value="5">
+    </span></p>
 </body>
+
 </html>

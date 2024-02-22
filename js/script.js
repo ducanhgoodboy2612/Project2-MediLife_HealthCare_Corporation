@@ -10,34 +10,34 @@ function login_direct() {
 var i = 1;
 var n = 3;
 var price = 40000;
-function next(){
-    if(i < n) i+= 1;
+function next() {
+    if (i < n) i += 1;
     else i = 1;
-    
-    document.getElementById("slide").setAttribute("src","img/slide"+ i+".jpg");
+
+    document.getElementById("slide").setAttribute("src", "img/slide" + i + ".jpg");
 }
-function back(){
-    if(i > 1) i-= 1;
+function back() {
+    if (i > 1) i -= 1;
     else i = n;
-    
-    document.getElementById("slide").setAttribute("src","img/slide"+ i+".jpg");
+
+    document.getElementById("slide").setAttribute("src", "img/slide" + i + ".jpg");
 }
-function autoplay(){
-    setInterval(next,3000);
+function autoplay() {
+    setInterval(next, 3000);
 }
 
 
-function inc(x){
+function inc(x) {
     a = parseInt(document.getElementById(x).value);
-  
+
     document.getElementById(x).value = a + 1;
-  
+
 }
-function dec(x){
+function dec(x) {
     a = parseInt(document.getElementById(x).value);
-    if(a > 1) {
+    if (a > 1) {
         a -= 1;
-     
+
     }
     document.getElementById(x).value = a;
 }

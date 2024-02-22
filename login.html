@@ -1,43 +1,79 @@
 <!DOCTYPE html>
 <!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title> Login </title>
 
-    <link rel="stylesheet" href="styles/log-sign.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <title> Login </title>
 
-  </head>
-  <body>
+  <link rel="stylesheet" href="styles/log-sign.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <!-- <section class="header">
     <div class="container">
-        <img src="img/logo.png" style="width: 50px; height: 50px;">
-      <form id="loginForm" action="#">
-        <div class="title">Đăng nhập</div>
-        <div class="input-box underline">
-          <input type="text" id="email" placeholder="Email hoặc SĐT" required>
-          <div class="underline"></div>
+      <div id="top-page">
+        <img src="img/logo.png" style="margin-left: 50px;">
+        <h1 id="com-name">MediLife HealthCare</h1>
+
+        <div id="menu-bar">
+          <ul>
+            <li><a class="mnbar-item" href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
+            <li><a class="mnbar-item active" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
+
+            <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
+            <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+            <div style="height: 80px; width: 180px; float: right;">
+              <button class="small-btn">
+                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+              </button>
+              <button class="small-btn">
+                <img src="img/notification.png" style="height: 20px;">
+              </button>
+              <button class="small-btn">
+                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+              </button>
+            </div>
+
+          </ul>
         </div>
-        <div class="input-box">
-          <input type="password" id="password" placeholder="Mật khẩu" required>
-          <div class="underline"></div>
-        </div>
-        <div class="input-box button">
-          <input type="submit" name="" value="Continue">
-        </div>
-      </form>
-        <div class="option">hoặc bạn có thể đăng nhập với</div>
-        <div class="gg">
-          <a href="#"><i class="fab fa-google"></i>Google</a>
-        </div>
-        <div class="facebook">
-          <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
-        </div>
-        <div>Chưa có tài khoản ? </div>
-        <a id="register" href="signup.html" >Đăng ký ngay</a>
+      </div>
+
+
     </div>
-    <script type="text/javascript" src="js/login.js"></script>
-   
-  </body>
+  </section> -->
+  <div class="container">
+    <img src="img/logo.png" style="width: 50px; height: 50px;">
+    <form id="loginForm" action="#">
+      <div class="title">Đăng nhập</div>
+      <div class="input-box underline">
+        <input type="text" id="email" placeholder="Email hoặc SĐT" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Mật khẩu" required>
+        <div class="underline"></div>
+      </div>
+      <div class="input-box button">
+        <input type="submit" name="" value="Continue">
+      </div>
+    </form>
+    <div class="option">hoặc bạn có thể đăng nhập với</div>
+    <div class="gg">
+      <a href="#"><i class="fab fa-google"></i>Google</a>
+    </div>
+    <div class="facebook">
+      <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+    </div>
+    <div>Chưa có tài khoản ? </div>
+    <a id="register" href="signup.html">Đăng ký ngay</a>
+  </div>
+  <script type="text/javascript" src="js/login.js"></script>
+
+</body>
+
 </html>

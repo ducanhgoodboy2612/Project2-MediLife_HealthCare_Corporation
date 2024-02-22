@@ -32,7 +32,7 @@
     //      document.getElementById(p).textContent = pri * (a+1) + " VNĐ";
     // }
 
-  
+
 
     $(document).ready(function () {
       var cart = sessionStorage.getItem("local-cart");
@@ -53,10 +53,10 @@
                         <th>Xóa</th>
                     </tr>
             `;
-      
+
       for (var i = 0; i < amount; i++) {
         var cartProduct = cartProducts[i]; // Get the product at the current index
-    
+
         var row = `
         <tr>
             <td id="item_id">${cartProduct.id}</td>
@@ -65,7 +65,7 @@
             <td style= "margin-top: -20px">${cartProduct.price}</td>
             <td>
                 <input class="round-btn" style="width: 25px; height: 25px; border-radius: 50%;" type="button" value="-" onclick="dec(this)" />
-                <input id="numtxt" style="width: 30px; height: 25px" type="text" value="${cartProduct.num}" />
+                <input id="numtxt" style="width: 30px; height: 25px" type="text" disabled  value="${cartProduct.num}" />
                 <input class="round-btn" style="width: 25px; height: 25px; border-radius: 50%;" type="button" value="+" onclick="inc(this)"/>
             </td>
             <td><p id="total">${cartProduct.total}</td>
@@ -79,9 +79,9 @@
       }
       sessionStorage.setItem("local-cart", JSON.stringify(cartProducts));
 
-      
+
       table += `</table>`;
-      
+
 
       $("#table-content").html(table);
 
@@ -129,20 +129,20 @@
           GIỎ HÀNG
         </h2>
       </div>
-      
-      <div id="table-content" >      </div>
-      <div id="cart-total" >
-          <h4 style="font-size: 26px;">Tổng tiền</h4>
-          <div>
-            <p style="float: left; margin-top: -5px;">Tạm tính: </p>
-            <span id="subtotal"></span>
-          </div>
-          <hr>
-          <div style="height: 45px; margin-top: 40px; width: 100%;">
-            <button id="back-to-product">Mua thêm</button>
-            <button id="btn-checkout" onclick="go_to_check()">Thanh toán ></button>
-          </div>
-          
+
+      <div id="table-content"> </div>
+      <div id="cart-total">
+        <h4 style="font-size: 26px;">Tổng tiền</h4>
+        <div>
+          <p style="float: left; margin-top: -5px;">Tạm tính: </p>
+          <span id="subtotal"></span>
+        </div>
+        <hr>
+        <div style="height: 45px; margin-top: 40px; width: 100%;">
+          <button id="back-to-product">Mua thêm</button>
+          <button id="btn-checkout" onclick="go_to_check()">Thanh toán ></button>
+        </div>
+
       </div>
 
     </div>

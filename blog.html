@@ -1,16 +1,18 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="styles/main.css">
-  
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="js/script.js"></script>
 
     <script src="js/jquery-3.6.4.min.js" type="text/Javascript"></script>
@@ -22,49 +24,54 @@
             margin: 20px 15px;
             font-weight: normal;
             font-family: 'Josefin Sans', sans-serif;
-            }
-        .mnbar-item{
+        }
+
+        .mnbar-item {
             text-decoration: none;
         }
+
         .nav-active {
-          text-decoration: underline;
+            text-decoration: underline;
         }
-        </style>
+    </style>
 </head>
+
 <body style="font-family: 'Ro', sans-serif;">
     <section class="header">
         <div class="container">
-          <div id="top-page">
-            <img src="img/logo.png" style="margin-left: 50px;">
-            <h1 id="com-name">MediLife HealthCare</h1>
-    
-            <div id="menu-bar">
-              <ul>
-                <li><a class="mnbar-item " href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
-                <li><a class="mnbar-item" href="product-page.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
-    
-                <li><a class="mnbar-item active" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
-                <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
-                <div style="height: 80px; width: 180px; float: right;">
-                  <button class="small-btn">
-                    <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
-                  </button>
-                  <button class="small-btn">
-                    <img src="img/notification.png" style="height: 20px;">
-                  </button>
-                  <button class="small-btn">
-                    <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
-                  </button>
+            <div id="top-page">
+                <img src="img/logo.png" style="margin-left: 50px;">
+                <h1 id="com-name">MediLife HealthCare</h1>
+
+                <div id="menu-bar">
+                    <ul>
+                        <li><a class="mnbar-item " href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
+                        <li><a class="mnbar-item" href="product-page.html" onclick="selectMenuItem(this)">Thuốc tốt</a>
+                        </li>
+
+                        <li><a class="mnbar-item active" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a>
+                        </li>
+                        <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+                        <div style="height: 80px; width: 180px; float: right;">
+                            <button class="small-btn">
+                                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/notification.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+                            </button>
+                        </div>
+
+                    </ul>
                 </div>
-    
-              </ul>
             </div>
-          </div>
-    
-    
+
+
         </div>
-      </section>
-      <section class="bg-grey" style="margin-top: 50px;">
+    </section>
+    <section class="bg-grey" style="margin-top: 50px;">
         <div class="container" style="width: 1140px; margin: 0px auto;">
             <div class="heading-section" style="text-align: center; margin-top: 60px;">
                 <h2>
@@ -77,10 +84,10 @@
                     <h1>10 cách mẹ bầu có thể làm để phát triển trí tuệ cho thai nhi</h1>
                 </div>
                 <div id="blog-right" style="margin-top: 50px;">
-                    
+
                     <div class="blog-cate">
                         <img src="img/blog/hotnew1.jpg">
-                        <h3>Phẫu thuật ở Singapore - liệu có thật sự an toàn</h3>
+                        <h3>Kinh phí phẫu thuật tuyến giáp tại Singapore</h3>
                     </div>
                     <div class="blog-cate">
                         <img src="img/blog/hotnew2.jpg">
@@ -94,17 +101,17 @@
             </div>
             <div class="nav" style=" margin-top: 100px;">
                 <ul>
-                  <li><a class="mnbar-item nav-active" href="#" >Sống khỏe</a></li>
-                  <li><a class="mnbar-item" href="#">Mẹ và bé</a></li>
-                  <li><a class="mnbar-item" href="#">Dinh dưỡng</a></li>
-                  <li><a class="mnbar-item" href="#">Bệnh thường gặp</a></li>
-                  <li><a class="mnbar-item" href="#">COVID-19</a></li>
-      
-                  <li><a class="mnbar-item" href="#" >Gia đình & giới tính</a></li>
+                    <li><a class="mnbar-item nav-active" href="#">Sống khỏe</a></li>
+                    <li><a class="mnbar-item" href="#">Mẹ và bé</a></li>
+                    <li><a class="mnbar-item" href="#">Dinh dưỡng</a></li>
+                    <li><a class="mnbar-item" href="#">Bệnh thường gặp</a></li>
+                    <li><a class="mnbar-item" href="#">COVID-19</a></li>
+
+                    <li><a class="mnbar-item" href="#">Gia đình & giới tính</a></li>
 
                 </ul>
-              </div>
-          
+            </div>
+
             <div class="row" style="height: 350px; margin-top: 90px;">
                 <h1>Sống khỏe</h1>
                 <div class="blog-card">
@@ -133,7 +140,7 @@
                     <a>Ngủ nhiều nhưng vẫn buồn ngủ. Nguyên nhân và cách khắc phục</a>
 
                 </div>
-             
+
             </div>
             <div class="row" style="height: 350px; margin-top: 60px;">
                 <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Mẹ và bé</h1>
@@ -164,6 +171,8 @@
                 </div>
 
             </div>
+            <img src="img/medicine/banner2.jpg" style="width: 100%;">
+
             <div class="row" style="height: 350px; margin-top: 60px;">
                 <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Dinh dưỡng</h1>
                 <div class="blog-card">
@@ -191,7 +200,7 @@
     <footer style="margin-top: 100px;">
         <div class="container">
             <div class="row">
-    
+
                 <div class="foot-nav" style="margin-left: 100px;">
                     <h4>Về MediLife</h4>
                     <ul class="list-unstyled">
@@ -220,13 +229,14 @@
                 <div class="foot-nav">
                     <h4>Liên hệ</h4>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 334 Đường Nguyễn Trãi, Q.Thanh Xuân, Hà Nội</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 334 Đường Nguyễn Trãi, Q.Thanh Xuân, Hà Nội
+                        </li>
                         <li><i class="fas fa-phone"></i> Điện thoại: 0123456789</li>
                         <li><i class="fas fa-envelope"></i> Email: medilifevietnam@gmail.com</li>
                     </ul>
                     <h4>Kết nối với chúng tôi</h4>
                     <img src="img/social-contact.png">
-    
+
                 </div>
                 <div class="foot-nav">
                     <div id="foot-logo" style="background-color: #eaebf0; border-radius: 50%;">
@@ -235,9 +245,9 @@
                     <!-- <img id="foot-logo" src="img/logock-removebg-preview.png"> -->
                 </div>
             </div>
-    
-            <div class="row" >
-                <div>   
+
+            <div class="row">
+                <div>
                     <p class="text-center"></p>
                 </div>
             </div>
@@ -248,4 +258,5 @@
         </div>
     </footer>
 </body>
+
 </html>

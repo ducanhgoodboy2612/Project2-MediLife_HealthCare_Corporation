@@ -30,7 +30,7 @@
 
         <div id="menu-bar">
           <ul>
-            <li><a class="mnbar-item" onclick="selectMenuItem(this)">Trang chủ</a></li>
+            <li><a class="mnbar-item" href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
             <li><a class="mnbar-item active" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
 
             <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
@@ -71,11 +71,11 @@
         <div id="detail-info" style="width: 475px; height: 435px; float: left;">
           <div id="product-price">
             <p>Mã thuốc: <span class="Product_id">134098</span></p>
-            <p class="ProductPrice_price">325.000 đ</p>
+            <p class="ProductPrice_price">125.000 đ</p>
             <div>
               <div>Giá đã bao gồm Thuế.</div>
               <div>Phí vận chuyển và các chi phí khác (nếu có) sẽ được thể hiện khi đặt hàng.</div>
-              <p>Mua hàng và tích lũy từ 50 xu vàng.</p>
+              <p class="important_info">Mua hàng và tích lũy từ 50 xu vàng.</p>
             </div>
           </div>
           <div id="product-name">Viên uống dầu cá Omega 3 Fish Oil 1000Mg Goodhealth, với dinh dưỡng chiết xuất từ cá
@@ -131,8 +131,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-white main"
-    style="margin-top: 50px; background-color: #F0F2F5; height: max-content; font-family: 'Gabarito', sans-serif;;">
+  <section class="bg-white main">
     <div class="container" style="width: 1340px; padding-left: 10px; ">
       <div style="padding-left: 22px;">
         <div id="nav-info">
@@ -406,23 +405,36 @@
     </div>
   </section>
   <section class="comment">
-    <div class="container" style="width: 1240px; margin: 0px auto; padding-left: 50px; ">
+    <div class="container" style="width: 1340px; margin: 0px auto; padding: 20px; ">
       <div class="title padding_title" id="BinhLuan" style="font-size: 28px; color: #5BC2AE;">BÌNH LUẬN</div>
-      <div class="title1 padding_title" id="cont-cmt">Đánh giá từ khách hàng cho Dung Dịch nhỏ mắt Vrohto Mineral Tear
-        (Chai 13ml)</div>
+      <div class="title1 padding_title" id="cont-cmt">Đánh giá cho Dầu cá Omega 3 Fish Oil 1000mg Good Health</div>
       <div class="box">
-        <span class="point">5.00 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-            class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        <!-- <span class="point">5.00 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+            class="fas fa-star"></i><i class="fas fa-star"></i></span> -->
+        <div class="rating">
+          <p>Đánh giá của bạn: <span class="star-rating">
+              <label for="rate-1" style="--i:1"><i class="fas fa-star"></i></label>
+              <input type="radio" name="rating" id="rate-1" value="1">
+              <label for="rate-2" style="--i:2"><i class="fas fa-star"></i></label>
+              <input type="radio" name="rating" id="rate-2" value="2" checked>
+              <label for="rate-3" style="--i:3"><i class="fas fa-star"></i></label>
+              <input type="radio" name="rating" id="rate-3" value="3">
+              <label for="rate-4" style="--i:4"><i class="fas fa-star"></i></label>
+              <input type="radio" name="rating" id="rate-4" value="4">
+              <label for="rate-5" style="--i:5"><i class="fas fa-star"></i></label>
+              <input type="radio" name="rating" id="rate-5" value="5">
+            </span></p>
+        </div>
         <span class="count"><a href="#cont-cmt">75 đánh giá của khách hàng</a></span>
         <div class="ratio">
-          <div class="level">5<i class="fas fa-star"></i></div>
+          <div class="level">5<i class="fas fa-star" style="color: #5BC2AE;"></i></div>
           <div class="progressBar">
             <div class="percentage5"></div>
           </div>
           <div class="status"><span class="sp-status">90%</span> | 67 đánh giá</div>
         </div>
         <div class="ratio">
-          <div class="level">4<i class="fas fa-star"></i></div>
+          <div class="level">4<i class="fas fa-star" style="color: #5BC2AE;"></i></div>
           <div class="progressBar">
             <div class="percentage4"></div>
 
@@ -430,22 +442,22 @@
           <div class="status"><span class="sp-status">10%</span> | 8 đánh giá</div>
         </div>
         <div class="ratio">
-          <div class="level">3<i class="fas fa-star"></i></div>
+          <div class="level">3<i class="fas fa-star" style="color: #5BC2AE;"></i></div>
           <div class="progressBar"></div>
           <div class="status"><span class="sp-status">0%</span> | 0 đánh giá</div>
         </div>
         <div class="ratio">
-          <div class="level">2<i class="fas fa-star"></i></div>
+          <div class="level">2<i class="fas fa-star" style="color: #5BC2AE;"></i></div>
           <div class="progressBar"></div>
           <div class="status"><span class="sp-status">0%</span> | 0 đánh giá</div>
         </div>
         <div class="ratio">
-          <div class="level">1<i class="fas fa-star"></i></div>
+          <div class="level">1<i class="fas fa-star" style="color: #5BC2AE;"></i></div>
           <div class="progressBar"></div>
           <div class="status"><span class="sp-status">0%</span> | 0 đánh giá</div>
         </div>
-        <button type="button" class="btn-right" id="ri">ĐÁNH GIÁ NGAY</button>
-        <button type="button" class="btn-bottom" id="bo">ĐÁNH GIÁ NGAY</button>
+        <!-- <button type="button" class="btn-right" id="ri">ĐÁNH GIÁ NGAY</button>
+        <button type="button" class="btn-bottom" id="bo">ĐÁNH GIÁ NGAY</button> -->
       </div>
       <div class="cmt">
         <div class="nameUser">Bui Quy Hung</div>

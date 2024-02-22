@@ -1,27 +1,36 @@
-.detail-left{
+.detail-left {
     float: left;
     width: 36%;
 }
-.detail-right{
+
+.detail-right {
     float: right;
     width: 62%;
-    
+
 }
-#detailpic{
+
+#detailpic {
     width: 95%;
     margin: 10px auto;
 }
-#product-price{
+
+#product-price {
     height: max-content;
     padding: 5px 24px;
     border: 1px solid rgb(137, 137, 236);
     border-radius: 15px;
     margin-bottom: 22px;
 }
-.ProductPrice_price{
-  color: #5ABFAA;
-  font-size: 38px;
+
+.ProductPrice_price {
+    color: #5ABFAA;
+    font-size: 38px;
 }
+
+.important_info {
+    color: #ea960f;
+}
+
 input.round-btn {
     border-radius: 10px;
     width: 40px;
@@ -30,11 +39,12 @@ input.round-btn {
     color: black;
     font-size: 20px;
     border: 1px solid rgb(155, 145, 145);
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-#numtxt{
-    text-align: center; 
+
+#numtxt {
+    text-align: center;
     width: 30px;
     height: 30px;
     margin: 0px 5px;
@@ -43,7 +53,8 @@ input.round-btn {
     background-color: #0065FF;
     color: white;
 }
-#buy-now{
+
+#buy-now {
     height: 100%;
     width: 140px;
     padding: 8px 20px;
@@ -52,7 +63,8 @@ input.round-btn {
     border-radius: 6px;
     float: left;
 }
-#btn-addToCart{
+
+#btn-addToCart {
     height: 100%;
     width: 273px;
     padding: 8px 20px;
@@ -62,95 +74,110 @@ input.round-btn {
     float: right;
     margin-left: 20px;
 }
-#deli-text{
+
+#deli-text {
     width: 173px;
     padding: 8px 20px;
 }
 
-.service-block{
+.service-block {
     width: 31%;
     align-items: center;
     float: left;
-    
-  }
-  .featured-block {
+
+}
+
+.featured-block {
     text-align: center;
     transition: all 0.5s ease;
     min-height: 256px;
     padding: 15px;
-   
-  }
-  
-  .featured-block:hover {
+
+}
+
+.featured-block:hover {
     background: var(--white-color);
     border-radius: var(--border-radius-medium);
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
-  }
-  
-  .featured-block:hover .featured-block-image {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+
+.featured-block:hover .featured-block-image {
     transform: scale(0.75);
-  }
-  
-  .featured-block-image {
+}
+
+.featured-block-image {
     display: block;
     margin: auto;
     transition: all 0.5s;
     height: 55px;
-  }
-  
-  .featured-block:hover .featured-block-text {
+}
+
+.featured-block:hover .featured-block-text {
     margin-top: 0;
     text-decoration: none;
-  }
-  
-  .featured-block-text {
+}
+
+.featured-block-text {
     color: #5ABFAA;
     font-size: 20px;
     font-weight: normal;
     font-family: 'Gabarito', sans-serif;
     margin-top: 30px;
     transition: all 0.5s;
-   
-    
-  }
 
-  .other-pic{
+
+}
+
+.other-pic {
     width: 100px;
     margin-left: 7px;
-  }
-  #nav-info{
+}
 
-  overflow:hidden;
-  
-  }
-  #nav-info ul li {
-    list-style:none;
-    margin-top:10px;
-    padding:8px;
-    margin-left:10px;
+#nav-info {
+
+    overflow: hidden;
+
+}
+
+#nav-info ul li {
+    list-style: none;
+    margin-top: 10px;
+    padding: 8px;
+    margin-left: 10px;
     display: inline;
 
-  }
-  #nav-info ul li:hover{
+}
+
+#nav-info ul li:hover {
     cursor: pointer;
-  }
-  
-  .d-active {
+}
+
+.d-active {
     /* background:#eaebf0; */
-    overflow:hidden;
-    
+    overflow: hidden;
+
     color: #0072BC;
-    padding:8px;
+    padding: 8px;
     border: 0px;
 
-  }
-  #detail-info{
-    padding-left: 10px;
-  }
-  .comment {
-    max-width: 1220px;
-    padding: 0px 10px;
 }
+
+.main {
+    margin-top: 50px;
+    background-color: #F0F2F5;
+    height: max-content;
+    font-family: 'Gabarito', sans-serif;
+}
+
+#detail-info {
+    padding-left: 10px;
+}
+
+.comment {
+
+    padding: 0px 5px;
+}
+
 .comment .title {
     font-weight: bold;
     font-size: 20px;
@@ -165,6 +192,7 @@ input.round-btn {
 .comment .box {
     height: auto;
     width: 100%;
+    margin-left: -10px;
     border-radius: 5px;
     border: 1px solid #dbdbdb;
     margin-top: 10px;
@@ -212,6 +240,7 @@ input.round-btn {
     height: 100%;
     border-radius: 5px;
 }
+
 .comment .box .ratio .progressBar .percentage4 {
     background-color: #ffb400;
     width: 10%;
@@ -236,17 +265,21 @@ input.round-btn {
     .comment .box #ri {
         display: none;
     }
+
     .comment .box #bo {
         display: block;
     }
+
     .comment .box2 .content #name {
         width: 100%;
         margin-bottom: 10px;
     }
+
     .comment .box2 .content #mail {
         width: 100%;
         margin-bottom: 10px;
     }
+
     .comment .box2 .content #send {
         width: 100%;
     }
@@ -372,71 +405,126 @@ input.round-btn {
     margin-top: 20px;
     font-size: 16px;
 }
-  .add-comment {
-  height: 120px;
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
+
+.add-comment {
+    height: 120px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
 }
 
-  .add-comment .avatar {
-  background-color: #b4b3b3;
-  height: 60px;
-  width: 60px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  float: left;
-  text-align: center;
-  font-size: 40px;
-  color: white;
+.add-comment .avatar {
+    background-color: #b4b3b3;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    float: left;
+    text-align: center;
+    font-size: 40px;
+    color: white;
 }
 
-  .add-comment .content {
-  background-color: #f5f6f7;
-  height: auto;
-  max-width: 1150px;
-  padding: 0px;
-  position: absolute;
-  left: 70px;
-  top: -10px;
-  border: 1px solid #dbdbdb;
+.add-comment .content {
+    background-color: #f5f6f7;
+    height: auto;
+    max-width: 1150px;
+    padding: 0px;
+    position: absolute;
+    left: 70px;
+    top: -10px;
+    border: 1px solid #dbdbdb;
 }
 
-  .add-comment .content textarea {
-  width: 100%;
-  resize: none;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  padding: 5px 8px;
-  border: none;
-  border-bottom: 1px solid #dbdbdb;
+.add-comment .content textarea {
+    width: 100%;
+    resize: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    padding: 5px 8px;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
 }
 
-  .add-comment .content .content-bot {
-  font-size: 12px;
-  font-weight: bold;
-  padding: 10px 0px 14px 10px;
+.add-comment .content .content-bot {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 0px 14px 10px;
 }
 
-  .add-comment .content .content-bot #uptofb {
-  cursor: pointer;
+.add-comment .content .content-bot #uptofb {
+    cursor: pointer;
 }
 
-  .add-comment .content .content-bot .btn-up {
-  position: absolute;
-  right: 10px;
-  bottom: 9px;
-  border: none;
-  padding: 5px 10px;
-  background-color: #00a2ff;
-  color: white;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: bold;
-  font-size: 14px;
+.add-comment .content .content-bot .btn-up {
+    position: absolute;
+    right: 10px;
+    bottom: 9px;
+    border: none;
+    padding: 5px 10px;
+    background-color: #00a2ff;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-  .add-comment .content .content-bot .btn-up:hover {
-  background-color: #0b7dda;
+.add-comment .content .content-bot .btn-up:hover {
+    background-color: #0b7dda;
+}
+
+.rating {
+    height: 70px;
+    background-color: #5BC2AE;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* .star-rating {
+    white-space: nowrap;
+} */
+
+.star-rating [type="radio"] {
+    appearance: none;
+}
+
+.star-rating i {
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.star-rating label:is(:hover, :has(~ :hover)) i {
+    cursor: pointer;
+    transform: scale(1.35);
+    color: #fffdba;
+    /* animation: jump 0.5s calc(0.3s + (var(--i) - 1) * 0.15s) alternate infinite; */
+}
+
+.star-rating label:has(~ :checked) i {
+    color: #faec1b;
+    text-shadow: 0 0 2px #ffffff, 0 0 10px #ffee58;
+}
+
+@keyframes jump {
+
+    0%,
+    50% {
+        transform: translatey(0) scale(1.35);
+    }
+
+    100% {
+        transform: translatey(-15%) scale(1.35);
+    }
+}
+
+#cont-cmt {
+    font-size: 18px;
+    margin-bottom: 20px;
 }

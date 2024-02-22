@@ -126,8 +126,7 @@ function inc(btn) {
       var cartProduct = cartProducts[i];
    
       if(cartProduct.id == id){
-        alert("del-item");
-        alert(i);
+        //alert(i);
     
         cartProducts.splice(i, 1);
         var total = price * currentValue;
@@ -135,6 +134,9 @@ function inc(btn) {
         updateSubtotal();
         $(this).parent().parent().remove();
         sessionStorage.setItem("local-cart", JSON.stringify(cartProducts));
+
+        alert("Đã xóa hàng khỏi giỏ !");
+
 
       }
     }

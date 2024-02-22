@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Admin</title>
-    
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles/main.css">
@@ -11,44 +12,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css">
-    <script type="text/javascript"   
-    src="https://canvasjs.com/assets/script/canvasjs.min.js">  
-</script> 
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js">
+    </script>
 
 </head>
+
 <body>
     <section class="header">
         <div class="container">
-          <div id="top-page">
-            <img src="img/logo.png" style="margin-left: 50px;">
-            <h1 id="com-name">MediLife HealthCare</h1>
-    
-            <div id="menu-bar">
-              <ul>
-                <li><a class="mnbar-item " href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
-                <li><a class="mnbar-item" href="product-page.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
-    
-                <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
-                <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
-                <div style="height: 80px; width: 180px; float: right;">
-                  <button class="small-btn">
-                    <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
-                  </button>
-                  <button class="small-btn">
-                    <img src="img/notification.png" style="height: 20px;">
-                  </button>
-                  <button class="small-btn">
-                    <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
-                  </button>
+            <div id="top-page">
+                <img src="img/logo.png" style="margin-left: 50px;">
+                <h1 id="com-name">MediLife HealthCare</h1>
+
+                <div id="menu-bar">
+                    <ul>
+                        <li><a class="mnbar-item " href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
+                        <li><a class="mnbar-item" href="product-page.html" onclick="selectMenuItem(this)">Thuốc tốt</a>
+                        </li>
+
+                        <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
+                        <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
+                        <div style="height: 80px; width: 180px; float: right;">
+                            <button class="small-btn">
+                                <img src="img/user-interface.png" style="height: 20px;" onclick="login_direct()">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/notification.png" style="height: 20px;">
+                            </button>
+                            <button class="small-btn">
+                                <img src="img/shopping-cart.png" style="height: 20px;" onclick="cart_direct()">
+                            </button>
+                        </div>
+
+                    </ul>
                 </div>
-    
-              </ul>
             </div>
-          </div>
-    
-    
+
+
         </div>
-      </section>
+    </section>
     <section>
         <div class="row all" style="margin-top: 100px; height: 900px;">
             <div class="col-2 col-s-12 col-m-12 selection">
@@ -56,29 +58,29 @@
                     <input style="outline: none" type="text" placeholder="Tìm kiếm ........">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div> -->
-                <div onclick="Home()" class="management clickh " style="margin-top: 30px;" >
+                <div onclick="Home()" class="management clickh " style="margin-top: 30px;">
                     <dl>
                         <dt>
-                            <span><i  class="fa-solid fa-circle-user" style="margin-right: 10px;"></i></span>
-                             Home
+                            <span><i class="fa-solid fa-circle-user" style="margin-right: 10px;"></i></span>
+                            Home
                         </dt>
                     </dl>
-                    
+
                 </div>
                 <div onclick="OVERVIEW()" class="management clickh  counting">
-                  <dl>
-                      <dt>
-                          <span><i class="fa-solid fa-chart-column" style="margin-right: 10px;"></i></span>
-                        
-                        Thống kê
-                      </dt>
-                  </dl>
-                   
-                    
+                    <dl>
+                        <dt>
+                            <span><i class="fa-solid fa-chart-column" style="margin-right: 10px;"></i></span>
+
+                            Thống kê
+                        </dt>
+                    </dl>
+
+
                 </div>
                 <div class="management generalinf">
                     <dl id="TTC">
-                        <dt >
+                        <dt>
                             <i class="fa-solid fa-list-ul"></i>
                             Thông tin quản lý
                             <i class="fa-solid fa-angle-down"></i>
@@ -98,15 +100,21 @@
                             <i class="fa-solid fas fa-vial"></i>
                             Sản phẩm
                         </dd>
-                        <dd onclick="Brand_Manage()" class="clickh" >
+                        <dd onclick="Brand_Manage()" class="clickh">
                             <span>--</span>
-                            <i class="fa-solid fa-address-card"></i>
+                            <i class="fa-solid fa-clinic-medical"></i>
                             Thương hiệu
                         </dd>
                         <dd onclick="Import_Invoice()" class="clickh">
                             <span>--</span>
                             <i class="fa-solid fa-newspaper"></i>
                             Hóa đơn nhập
+                        </dd>
+                        <dd onclick="Employee()" class="clickh">
+                            <span>--</span>
+                            <i class="fa-solid fa-address-card"></i>
+
+                            Nhân viên
                         </dd>
                         <dd>
                             <span>--</span>
@@ -120,10 +128,10 @@
                         </dd>
                     </dl>
                     <dl id="QLDH">
-                        <dt style="font-size:15px"> 
-                            <i  class="fa-solid fa-building-user"></i>
+                        <dt style="font-size:15px">
+                            <i class="fa-solid fa-building-user"></i>
                             Đơn đặt hàng
-                            <i style="margin-right: 3px;margin-top: 2px;"  class="fa-solid fa-angle-down"></i>
+                            <i style="margin-right: 3px;margin-top: 2px;" class="fa-solid fa-angle-down"></i>
                         </dt>
                         <dd onclick="Uncomfirm_Invoice()" class="clickh">
                             <span>--</span>
@@ -151,21 +159,21 @@
                         </dd>
                     </dl>
                 </div>
-                
+
                 <div class="management user">
                     <dl>
                         <dt>
                             <i class="fa-solid fa-user"></i>
-                            User 
+                            User
                             <i class="fa-solid fa-angle-down"></i>
                         </dt>
-                        <dd>
+                        <dd onclick="Employee()" class="clickh">
                             <span>--</span>
-                             Nhân viên
+                            Nhân viên
                         </dd>
                         <dd>
                             <span>--</span>
-                            Các thượng đế
+                            Khách hàng
                         </dd>
                     </dl>
                 </div>
@@ -179,10 +187,10 @@
                     </dl>
                 </div> -->
             </div>
-            
+
             <div class="col-10 col-s-12 col-m-12 Details">
                 <div class="home Page">
-                    <div  class="logohome">
+                    <div class="logohome">
                         <a href="index.html"><img src="img/logo.png" width="20%"></a>
                     </div>
                     <div class="homename">MEDILIFE HEALTHCARE</div>
@@ -199,43 +207,43 @@
                     <div class="homedetails">
                         <table>
                             <tr>
-                                <td>Mã nhân viên  </td>
+                                <td>Mã nhân viên </td>
                                 <td id="mahome">NV01</td>
                             </tr>
                             <tr>
-                                <td>Tên nhân viên  </td>
+                                <td>Tên nhân viên </td>
                                 <td id="tenhome">Phạm Đình Danh Khoa</td>
                             </tr>
                             <tr>
-                                <td>Email  </td>
+                                <td>Email </td>
                                 <td id="emailhome">danhkhoaPham@gmail.com</td>
                             </tr>
                             <tr>
-                                <td>Số điện thoại  </td>
+                                <td>Số điện thoại </td>
                                 <td id="sdthome">0934534999</td>
                             </tr>
                             <tr>
-                                <td>Địa chỉ  </td>
+                                <td>Địa chỉ </td>
                                 <td id="diachihome">Thanh Xuân - Hà Nội</td>
                             </tr>
                             <tr>
-                                <td>Chức vụ  </td>
+                                <td>Chức vụ </td>
                                 <td id="nhanvienhome">Quản lý</td>
                             </tr>
                             <tr>
-                                <td>Mật khẩu  </td>
-                                <td >*********  </td>
+                                <td>Mật khẩu </td>
+                                <td>********* </td>
                             </tr>
                         </table>
                     </div>
                     <div class="my_btn">
                         <a href="#"><span>Đổi mật khẩu</span></a>
                     </div>
-                    
+
                 </div>
                 <div class="col-12 col-s-12 col-m-12 overview Page">
                     <div class="col-12 col-s-12 col-m-12 overview1">
-                        <span  class="col-12 col-s-12 col-m-12">KẾT QUẢ KINH DOANH TRONG NGÀY</span>
+                        <span class="col-12 col-s-12 col-m-12">KẾT QUẢ KINH DOANH</span>
                         <!-- <div class="col-12 col-s-12 col-m-12 Bieudo">
                             <div class="bieudo1 bieudo11">
                                 <i class="fa-solid fa-sack-dollar"></i>
@@ -263,12 +271,12 @@
                                 <option value="tuan">Theo tuần</option>
                                 <option value="thang">Theo tháng</option>
                                 <option value="nam">Theo năm</option>
-                              
+
                             </select>
                         </div>
                         <div class="col-12 col-s-12 col-m-12 sales">
-                            <div id="chartContainerTuan" style="height:400px;width: 60%; margin: auto;" > </div>
-                            
+                            <div id="chartContainerTuan" style="height:400px;width: 60%; margin: auto;"> </div>
+
                         </div>
                         <div class="col-12 col-s-12 col-m-12 sales_week">
                             <div class="money_week week1">
@@ -277,8 +285,8 @@
                             </div>
                             <div class="product_week week1">
                                 <i class="fa-solid fa-file-lines"></i>
-                            <span>Đơn hàng : <span>1.254</span><br>
-                            <span>Khách hàng mới : <span>110</span><br>
+                                <span>Đơn hàng : <span>1.254</span><br>
+                                    <span>Khách hàng mới : <span>110</span><br>
                             </div>
                             <div class="return_week week1">
                                 <i class="fa-solid fa-arrow-rotate-left"></i>
@@ -286,7 +294,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-s-12 col-m-12 sales">
-                            <div id="chartContainerthang" style="height:400px;width: 100%" > </div>
+                            <div id="chartContainerthang" style="height:400px;width: 100%"> </div>
                         </div>
                         <div class="col-12 col-s-12 col-m-12 sales_week">
                             <div class="money_week week1">
@@ -295,8 +303,8 @@
                             </div>
                             <div class="product_week week1">
                                 <i class="fa-solid fa-file-lines"></i>
-                            <span>Đơn hàng : <span>5.087</span><br>
-                            <span>Khách hàng mới : <span>341</span><br>
+                                <span>Đơn hàng : <span>5.087</span><br>
+                                    <span>Khách hàng mới : <span>341</span><br>
                             </div>
                             <div class="return_week week1">
                                 <i class="fa-solid fa-arrow-rotate-left"></i>
@@ -304,7 +312,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-s-12 col-m-12 sales">
-                            <div id="chartContainer" style="height:400px;width: 100%" > </div>
+                            <div id="chartContainer" style="height:400px;width: 100%"> </div>
                         </div>
                         <div class="col-12 col-s-12 col-m-12 sales_week">
                             <div class="money_week week1">
@@ -313,8 +321,8 @@
                             </div>
                             <div class="product_week week1">
                                 <i class="fa-solid fa-file-lines"></i>
-                            <span>Đơn hàng : <span>62.003</span><br>
-                            <span>Khách hàng mới : <span>1.109</span><br>
+                                <span>Đơn hàng : <span>62.003</span><br>
+                                    <span>Khách hàng mới : <span>1.109</span><br>
                             </div>
                             <div class="return_week week1">
                                 <i class="fa-solid fa-arrow-rotate-left"></i>
@@ -322,18 +330,18 @@
                             </div>
                         </div>
                         <div class="XemChiTiet">
-                            <button>Xem Chi Tiết  <i class="fa-solid fa-sort-down"></i></button>
+                            <button>Xem Chi Tiết <i class="fa-solid fa-sort-down"></i></button>
                         </div>
                         <div class="chitiet">
                             <table>
                                 <tr>
                                     <th colspan="12">BÁO CÁO NHẬP, XUẤT, TỒN HÀNG</th>
-                                    
+
                                 </tr>
                                 <tr>
                                     <th rowspan="2">Mã Thuốc</th>
-                                    <th rowspan="2" >Tên Thuốc</th>
-                                    <th rowspan="2" >Đơn vị tính</th>
+                                    <th rowspan="2">Tên Thuốc</th>
+                                    <th rowspan="2">Đơn vị tính</th>
                                     <th rowspan="2">Tồn kho đầu kỳ</th>
                                     <th colspan="2">Nhập trong kỳ</th>
                                     <th colspan="2">Xuất trong kỳ</th>
@@ -347,7 +355,7 @@
                                     <!-- <th>Đơn giá xuất kho</th> -->
                                     <th>SL</th>
                                     <th>Thành tiền</th>
-                                 
+
                                 </tr>
                                 <tr>
                                     <th>A</th>
@@ -374,7 +382,7 @@
                                     <td>6.454.000đ</td>
                                     <td>44</td>
                                     <td>2.033.000đ</td>
-                       
+
                                 </tr>
                                 <tr>
                                     <td>MH002</td>
@@ -387,7 +395,7 @@
                                     <td>9.454.000đ</td>
                                     <td>82</td>
                                     <td>1.033.000đ</td>
-                           
+
                                 </tr>
                                 <tr>
                                     <td>MH003</td>
@@ -408,7 +416,7 @@
                             <div class="sale_quickly1">
                                 <i class="fa-solid fa-draw-polygon"></i>
                                 <span style="color: rgb(50, 219, 185); font-size: 20px;">Sản phẩm bán chạy </span>
-                                <div  class="sale_pr">
+                                <div class="sale_pr">
                                     <img src="img/medicine/detailpic.jpg" alt="">
                                     <span>Thuốc nhỏ mắt Vhoro Minerals</span>
                                 </div>
@@ -423,7 +431,7 @@
                             </div>
                             <div class=" sale_quickly2">
                                 <i class="fa-solid fa-eye"></i>
-                                <span style="color: rgb(192, 27, 9)">  Sản phẩm bán chậm</span>
+                                <span style="color: rgb(192, 27, 9)"> Sản phẩm bán chậm</span>
                                 <div class="sale_pr">
                                     <img src="img/medicine/gacrangeb.png" alt="">
                                     <span>Gạc răng cho bé BabyTooth</span>
@@ -432,19 +440,20 @@
                                     <img src="img/medicine/fagacar.jpg" alt="">
                                     <span>Thuốc bổ gan Đông Y Fagacar (50mg)</span>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
                 <div class="pro_cate Page">
                     <div class="headerCP">
                         <i class="fa-solid fa-house-chimney-window"></i>
                         <a href="index.html">Trang chủ / </a>
                         <a>Quản lý danh mục thuốc</a>
-                        <button onclick="OpenAddCategory()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
+                        <button onclick="OpenAddCategory()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm
+                            mới</button>
                     </div>
                     <div class="search_head">
                         Tìm kiếm
@@ -452,20 +461,20 @@
                     <div class="search_box">
                         <div class="search_input">
                             <span>Mã DM </span>
-                        <input type="text" >
+                            <input type="text">
                         </div>
                         <div class="search_input">
                             <span>Tên DM</span>
-                        <input type="text" >
+                            <input type="text">
                         </div>
-                        <button><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+                        <button><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
                     </div>
                     <div class="company_details">
                         <div class="company_detail1">
-                            <i class="fas fa-chart-pie"></i>  Danh mục thuốc - TPCN
+                            <i class="fas fa-chart-pie"></i> Danh mục thuốc - TPCN
                         </div>
                         <div class="company_detail2">
-                            <table  id="category">
+                            <table id="category">
                             </table>
                         </div>
                         <!-- <button onclick="UpdateCompany()" id="update"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button> -->
@@ -509,7 +518,8 @@
                         <i class="fa-solid fa-house-chimney-window"></i>
                         <a href="index.html">Trang chủ / </a>
                         <a>Quản lý sản phẩm</a>
-                        <button onclick="OpenAddProduct()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
+                        <button onclick="OpenAddProduct()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm
+                            mới</button>
                     </div>
                     <div class="search_head">
                         Tìm kiếm
@@ -524,18 +534,20 @@
                             <input type="text" id="searchName">
 
                         </div>
-                     
-                        <button onclick="searchProducts()"><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+
+                        <button onclick="searchProducts()"><i class="fa-solid fa-magnifying-glass"></i> Tìm
+                            kiếm</button>
                     </div>
                     <div class="company_details">
                         <div class="company_detail1">
-                            <i class="fas fa-chart-pie"></i>  Danh sách sản phẩm
+                            <i class="fas fa-chart-pie"></i> Danh sách sản phẩm
                         </div>
                         <div class="company_detail2">
-                            <table  id="product">
+                            <table id="product">
                             </table>
                         </div>
-                        <button onclick="LoadProduct()" id="btn_showAll"><i class="fa-regular fas fa-clipboard-list"></i>  Hiển thị tất cả </button>
+                        <button onclick="LoadProduct()" id="btn_showAll"><i
+                                class="fa-regular fas fa-clipboard-list"></i> Hiển thị tất cả </button>
                     </div>
                 </div>
                 <div class="brand_manage Page">
@@ -551,17 +563,17 @@
                     <div class="search_box">
                         <div class="search_input">
                             <span>Mã thương hiệu</span>
-                        <input type="text" >
+                            <input type="text">
                         </div>
                         <div class="search_input">
                             <span>Tên thương hiệu</span>
-                        <input type="text" >
+                            <input type="text">
                         </div>
-                        <button><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+                        <button><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
                     </div>
                     <div class="company_details">
                         <div class="company_detail1">
-                            <i class="fas fa-chart-pie"></i>  Danh sách thương hiệu cung cấp thuốc
+                            <i class="fas fa-chart-pie"></i> Danh sách thương hiệu cung cấp thuốc
                         </div>
                         <div class="company_detail2">
                             <table>
@@ -583,7 +595,8 @@
                                     <td>0345342229</td>
                                     <td>Đống Đa, Hà Nội</td>
                                     <td>Nợ 25 hộp Canxi Balogun</td>
-                                    <td><i onclick="EditPro(`+ x.mathuoc+ `)" class="fa-solid fa-pen-to-square"></i>   <i class="fa-solid fa-trash-can"></i></td>
+                                    <td><i onclick="EditPro(`+ x.mathuoc+ `)" class="fa-solid fa-pen-to-square"></i> <i
+                                            class="fa-solid fa-trash-can"></i></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -593,11 +606,12 @@
                                     <td>0983459898</td>
                                     <td>Seoul, Hàn Quốc</td>
                                     <td>Vừa gửi đơn nhập</td>
-                                    <td><i onclick="EditPro(`+ x.mathuoc+ `)" class="fa-solid fa-pen-to-square"></i>   <i class="fa-solid fa-trash-can"></i></td>
+                                    <td><i onclick="EditPro(`+ x.mathuoc+ `)" class="fa-solid fa-pen-to-square"></i> <i
+                                            class="fa-solid fa-trash-can"></i></td>
                                 </tr>
                             </table>
                         </div>
-                       
+
                     </div>
                 </div>
                 <div class="invoice_input Page">
@@ -605,7 +619,8 @@
                         <i class="fa-solid fa-house-chimney-window"></i>
                         <a href="http://127.0.0.1:5500/index.html">Trang chủ / </a>
                         <a>Quản lý hóa đơn nhập</a>
-                        <button onclick="OpenImportInvoice()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
+                        <button onclick="OpenImportInvoice()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm
+                            mới</button>
                     </div>
                     <div class="search_head">
                         Tìm kiếm
@@ -613,23 +628,60 @@
                     <div class="search_box">
                         <div class="search_input">
                             <span>Mã hóa đơn</span>
-                        <input type="text" >
+                            <input type="text">
                         </div>
                         <div class="search_input">
                             <span>Ngày lập</span>
-                        <input type="text" >
+                            <input type="text">
                         </div>
-                        <button><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+                        <button><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
                     </div>
                     <div class="company_details">
                         <div class="company_detail1">
-                            <i class="fas fa-chart-pie"></i>  Danh sách hóa đơn nhập
+                            <i class="fas fa-chart-pie"></i> Danh sách hóa đơn nhập
                         </div>
                         <div class="company_detail2">
-                            <table  id="invoice_import">
+                            <table id="invoice_import">
                             </table>
                         </div>
-                        
+
+                    </div>
+                </div>
+                <div class="product_manage Page">
+                    <div class="headerCP">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                        <a href="index.html">Trang chủ / </a>
+                        <a>Quản lý nhân viên</a>
+                        <button onclick="OpenAddEmp()" id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm
+                            mới</button>
+                    </div>
+                    <div class="search_head">
+                        Tìm kiếm
+                    </div>
+                    <div class="search_box">
+                        <div class="search_input">
+                            <span>Mã NV</span>
+                            <input type="text" id="searchCode">
+                        </div>
+                        <div class="search_input">
+                            <span>Tên NV</span>
+                            <input type="text" id="searchName">
+
+                        </div>
+
+                        <button onclick="searchProducts()"><i class="fa-solid fa-magnifying-glass"></i> Tìm
+                            kiếm</button>
+                    </div>
+                    <div class="company_details">
+                        <div class="company_detail1">
+                            <i class="fas fa-chart-pie"></i> Danh sách nhân viên
+                        </div>
+                        <div class="company_detail2">
+                            <table id="employee">
+                            </table>
+                        </div>
+                        <button onclick="LoadProduct()" id="btn_showAll"><i
+                                class="fa-regular fas fa-clipboard-list"></i> Hiển thị tất cả </button>
                     </div>
                 </div>
                 <div class="Uniconfirmed_Invoice Page">
@@ -637,7 +689,7 @@
                         <i class="fa-solid fa-house-chimney-window"></i>
                         <a href="http://127.0.0.1:5500/index.html">Trang chủ / </a>
                         <a>Quản lý đơn hàng chưa xử lý</a>
-                        <button  id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
+                        <button id="Addnew"> <i class="fa-solid fa-plus"></i> Thêm mới</button>
                     </div>
                     <div class="search_head">
                         Tìm kiếm
@@ -645,31 +697,31 @@
                     <div class="search_box">
                         <div class="search_input">
                             <span>Mã đơn hàng</span>
-                        <input type="text" >
+                            <input type="text">
                         </div>
                         <div class="search_input">
                             <span>Tên đơn hàng</span>
-                        <input type="text" >
+                            <input type="text">
                         </div>
-                        <button><i class="fa-solid fa-magnifying-glass"></i>  Tìm kiếm</button>
+                        <button><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
                     </div>
                     <div class="company_details ">
                         <div class="company_detail1">
-                            <i class="fas fa-chart-pie"></i>  Danh sách đơn hàng
+                            <i class="fas fa-chart-pie"></i> Danh sách đơn hàng
                         </div>
                         <div class="company_detail2">
-                            <table >
+                            <table>
                                 <tr style="font-size:13px">
                                     <th><input type="checkbox"></th>
                                     <th>STT</th>
                                     <th>Mã hóa đơn</th>
-                                    
+
                                     <th>Mã nhân viên</th>
                                     <th>Tên khách hàng</th>
                                     <th>Số điện thoại</th>
                                     <th>Địa chỉ</th>
                                     <th>Ngày đặt</th>
-                             
+
                                     <th>Tổng hóa đơn</th>
                                     <th>Tác vụ</th>
                                 </tr>
@@ -683,8 +735,9 @@
                                     <td>8/3 Hồng Quang, Hải Dương</td>
                                     <td>02/11/2023</td>
                                     <td>520.000đ</td>
-                             
-                                    <td><i class="fa-solid fa-pen-to-square"></i>   <i  class="fa-solid fa-trash-can"></i></td>
+
+                                    <td><i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash-can"></i>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -696,8 +749,9 @@
                                     <td>15 Quan Hoa, Cầu Giấy, Hà Nội</td>
                                     <td>02/11/2023</td>
                                     <td>520.000đ</td>
-                             
-                                    <td><i class="fa-solid fa-pen-to-square"></i>   <i  class="fa-solid fa-trash-can"></i></td>
+
+                                    <td><i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash-can"></i>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -709,8 +763,9 @@
                                     <td>Tứ Dân, Khoái Châu, Hưng Yên</td>
                                     <td>04/11/2023</td>
                                     <td>210.000đ</td>
-                             
-                                    <td><i class="fa-solid fa-pen-to-square"></i>   <i  class="fa-solid fa-trash-can"></i></td>
+
+                                    <td><i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash-can"></i>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"></td>
@@ -722,47 +777,52 @@
                                     <td>98 Vũ Trọng Phụng, Hải Dương</td>
                                     <td>03/11/2023</td>
                                     <td>170.000đ</td>
-                             
-                                    <td><i class="fa-solid fa-pen-to-square"></i>   <i  class="fa-solid fa-trash-can"></i></td>
+
+                                    <td><i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash-can"></i>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
-                        <button  id="update"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
+                        <button id="update"><i class="fa-regular fa-circle-check"></i> Cập nhập </button>
                     </div>
                 </div>
+
             </div>
-            </div>
+        </div>
         </div>
     </section>
     <section>
         <div class="displayad">
-            <div class="display">  </div>
+            <div class="display"> </div>
             <div class="row ADDD">
-            <div class="col-7 col-s-12 col-m-12 addCategory addLog">
-               <div class="addcp">
-                   <span>Cập nhập danh mục thuốc</span>
-               </div>
-               <div class="addCP1">
-                   <span>Mã danh mục <span style="color: red"> *</span></span>
-               <input id="madm" type="text" disabled>
-               </div>
-               <div class="addCP1">
-                   <span>Tên danh mục <span style="color: red"> *</span></span>
-               <input id="tendm" type="text"  >
-               </div>
-               <div class="addCP1">
-                   <span>Mô tả <span style="color: red"> *</span></span>
-               <textarea id="mota" ></textarea> </div>
-               <div class=" note" style="color: red;margin-bottom: 15px;">
-               </div>
-              
-               <button id="exit" onclick="ExitCate()" ><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
-               <button id="agree" onclick="AddCategory()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
-               <button id="refesh" onclick="Refresh()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
-               <button onclick="UpdateCate()" id="updatea"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
-               </div>
-           
-            <!-- <div class="col-7 col-s-12 col-m-12 AddDongmaytinh ">
+                <div class="col-7 col-s-12 col-m-12 addCategory addLog">
+                    <div class="addcp">
+                        <span>Cập nhập danh mục thuốc</span>
+                    </div>
+                    <div class="addCP1">
+                        <span>Mã danh mục <span style="color: red"> *</span></span>
+                        <input id="madm" type="text" disabled>
+                    </div>
+                    <div class="addCP1">
+                        <span>Tên danh mục <span style="color: red"> *</span></span>
+                        <input id="tendm" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Mô tả <span style="color: red"> *</span></span>
+                        <textarea id="mota"></textarea>
+                    </div>
+                    <div class=" note" style="color: red;margin-bottom: 15px;">
+                    </div>
+
+                    <button id="exit" onclick="ExitCate()"><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
+                    <button id="agree" onclick="AddCategory()"><i class="fa-regular fa-square-check"></i> Thêm
+                        mới</button>
+                    <button id="refesh" onclick="Refresh()"> <i class="fa-solid fa-arrows-rotate"></i> Làm mới</button>
+                    <button onclick="UpdateCate()" id="updatea"><i class="fa-regular fa-circle-check"></i> Cập nhập
+                    </button>
+                </div>
+
+                <!-- <div class="col-7 col-s-12 col-m-12 AddDongmaytinh ">
                 <div class="addcp">
                     <span>Cập nhập dòng máy tính</span>
                 </div>
@@ -790,34 +850,80 @@
                 <button id="refeshd" onclick="RefreshD()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
                 <button onclick="UpdateDongMTT()" id="updatead"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
             </div> -->
-            <div class="col-7 col-s-12 col-m-12 addProduct addLog ">
-                <div class="addcp">
-                    <span>Cập nhập sản phẩm</span>
+                <div class="col-7 col-s-12 col-m-12 addProduct addLog ">
+                    <div class="addcp">
+                        <span>Cập nhập sản phẩm</span>
+                    </div>
+                    <div class="addCP1">
+                        <span>Mã thuốc<span style="color: red"> *</span></span>
+                        <input id="mathuoc" type="text" disabled>
+                    </div>
+                    <div class="addCP1">
+                        <span>Tên thuốc<span style="color: red"> *</span></span>
+                        <input id="tenthuoc" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Giá bán<span style="color: red"> *</span></span>
+                        <input id="giaban" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Mô tả</span>
+                        <textarea id="motathuoc"></textarea>
+                    </div>
+                    <div class="note" style="color: red;margin-bottom: 15px;"></div>
+                    <button id="exit" onclick="Exit()"><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
+                    <button id="agree" onclick="AddProduct()"><i class="fa-regular fa-square-check"></i> Thêm
+                        mới</button>
+                    <button id="refesh" onclick="RefreshPro()"> <i class="fa-solid fa-arrows-rotate"></i> Làm
+                        mới</button>
+                    <button onclick="UpdatePro()" id="updatea"><i class="fa-regular fa-circle-check"></i> Cập nhập
+                    </button>
                 </div>
-                <div class="addCP1">
-                    <span>Mã thuốc<span style="color: red"> *</span></span>
-                <input id="mathuoc" type="text" disabled>
+
+
+                <div class="col-7 col-s-12 col-m-12 addEmployee addLog ">
+                    <div class="addcp">
+                        <span>Cập nhập thông tin nhân viên</span>
+                    </div>
+                    <div class="addCP1">
+                        <span>Mã NV<span style="color: red"> *</span></span>
+                        <input id="maNV" type="text" disabled>
+                    </div>
+                    <div class="addCP1">
+                        <span>Tên NV<span style="color: red"> *</span></span>
+                        <input id="tenNV" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Vị trí<span style="color: red"> *</span></span>
+                        <input id="vitri" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Năm sinh<span style="color: red"> *</span></span>
+                        <input id="namsinh" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>SĐT<span style="color: red"> *</span></span>
+                        <input id="sdt" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Địa chỉ<span style="color: red"> *</span></span>
+                        <input id="diachi" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Lương hiện tại<span style="color: red"> *</span></span>
+                        <input id="luong" type="text">
+                    </div>
+                    <div class="note" style="color: red;margin-bottom: 15px;"></div>
+                    <button id="exit" onclick="ExitAddEmp()"><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
+                    <button id="agree" onclick="AddEmployee()"><i class="fa-regular fa-square-check"></i> Thêm
+                        mới</button>
+                    <button id="refesh" onclick="RefreshEmp()"> <i class="fa-solid fa-arrows-rotate"></i> Làm
+                        mới</button>
+                    <button onclick="UpdateEmp()" id="updatea"><i class="fa-regular fa-circle-check"></i> Cập nhập
+                    </button>
                 </div>
-                <div class="addCP1">
-                    <span>Tên thuốc<span style="color: red"> *</span></span>
-                <input id="tenthuoc" type="text"  >
-                </div>
-                <div class="addCP1">
-                    <span>Giá bán<span style="color: red"> *</span></span>
-                <input id="giaban" type="text"  >
-                </div>
-                <div class="addCP1">
-                    <span>Mô tả</span>
-                <textarea id="motathuoc" ></textarea>
-                </div>
-                <div class="note" style="color: red;margin-bottom: 15px;"></div>
-                <button id="exit" onclick="Exit()" ><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
-                <button id="agree" onclick="AddProduct()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
-                <button id="refesh" onclick="RefreshPro()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
-                <button onclick="UpdatePro()" id="updatea"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
-                </div>
-          
-           <!-- <div class="col-7 col-s-12 col-m-12 AddProvider">
+
+                <!-- <div class="col-7 col-s-12 col-m-12 AddProvider">
             <div class="addcp">
                 <span>Cập nhập nhà cung cấp</span><span style="color: red"> *</span>
             </div>
@@ -847,56 +953,63 @@
             <button id="refesh" onclick="RefreshProvider()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
             <button onclick="UpdateProviderA()" id="updatea"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
             </div> -->
-            <div class="col-9 col-s-12 col-m-12 addImportInvoice addLog">
-                <div class="addcp">
-                    <span>Cập nhập hóa đơn nhập</span>
+                <div class="col-9 col-s-12 col-m-12 addImportInvoice addLog">
+                    <div class="addcp">
+                        <span>Cập nhập hóa đơn nhập</span>
+                    </div>
+                    <div class="addCP1">
+                        <span>Mã hóa đơn nhập</span><span style="color: red"> *</span>
+                        <input id="bill_id" type="text" disabled>
+                    </div>
+                    <div class="addCP1">
+                        <span>Mã thương hiệu thuốc</span><span style="color: red"> *</span>
+                        <input id="brand_id" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Nhân viên nhập</span><span style="color: red"> *</span>
+                        <input id="emp_id" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Ngày nhập</span><span style="color: red"> *</span>
+                        <input id="date" type="date">
+                    </div>
+                    <div class="addCP1">
+                        <span>Mã thuốc nhập</span><span style="color: red"> *</span>
+                        <input id="medi_id" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Giá nhập</span><span style="color: red"> *</span>
+                        <input id="price" type="text">
+                    </div>
+                    <div class="addCP1">
+                        <span>Số lượng</span><span style="color: red"> *</span>
+                        <input id="quantity" type="number" value="1" min="1">
+                    </div>
+
+                    <div class=" note" style="color: red;margin-bottom: 15px;"></div>
+                    <button id="exit" onclick="ExitAddII()"><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
+                    <button id="agree" onclick="AddII()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
+                    <button id="refesh" onclick="RefreshII()"> <i class="fa-solid fa-arrows-rotate"></i> Làm
+                        mới</button>
+                    <button onclick="UpdateII()" id="updatea"><i class="fa-regular fa-circle-check"></i> Cập nhập
+                    </button>
                 </div>
-                <div class="addCP1">
-                    <span>Mã hóa đơn nhập</span><span style="color: red"> *</span>
-                <input id="bill_id" type="text" disabled >
-                </div>
-                <div class="addCP1">
-                    <span>Mã thương hiệu thuốc</span><span style="color: red"> *</span>
-                <input id="brand_id" type="text"  >
-                </div>
-                <div class="addCP1">
-                    <span>Mã nhân viên nhập</span><span style="color: red"> *</span>
-                <input id="emp_id" type="text"  >
-                </div>
-                <div class="addCP1">
-                    <span>Ngày nhập</span><span style="color: red"> *</span>
-                <input id="date" type="date"  >
-                </div>
-                <div class="addCP1">
-                    <span>Mã thuốc nhập</span><span style="color: red"> *</span>
-                <input id="medi_id" type="text"  >
-                </div>
-                <div class="addCP1">
-                    <span>Giá nhập</span><span style="color: red"> *</span>
-                <input id="price" type="text"  >
-                </div>
-                <div class="addCP1">
-                    <span>Số lượng</span><span style="color: red"> *</span>
-                <input id="quantity" type="number" value="1" min="1" ></div>
-               
-                <div class=" note" style="color: red;margin-bottom: 15px;"></div>
-                <button id="exit" onclick="ExitAddII()" ><i class="fa-regular fa-circle-xmark"></i>Thoát</button>
-                <button id="agree" onclick="AddII()"><i class="fa-regular fa-square-check"></i> Thêm mới</button>
-                <button id="refesh" onclick="RefreshII()"> <i class="fa-solid fa-arrows-rotate"></i>  Làm mới</button>
-                <button onclick="UpdateII()" id="updatea"><i class="fa-regular fa-circle-check"></i>  Cập nhập </button>
             </div>
         </div>
-       </div>
-       </div>
+        </div>
         </div>
     </section>
-    
+
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/admin.js"></script>
 <script type="text/javascript" src="js/chart.js"></script>
 <script type="text/javascript" src="js/admin-product.js"></script>
 <script type="text/javascript" src="js/admin-bill.js"></script>
-<script type="text/javascript"  src="https://canvasjs.com/assets/script/canvasjs.min.js">  </script>  
+<script type="text/javascript" src="js/admin-emp.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js">  </script>
 
 </html>
+
+<!-- v2 -->

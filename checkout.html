@@ -25,8 +25,9 @@
 
                 <div id="menu-bar">
                     <ul>
-                        <li><a class="mnbar-item" onclick="selectMenuItem(this)">Trang chủ</a></li>
-                        <li><a class="mnbar-item" href="menufo.html" onclick="selectMenuItem(this)">Thuốc tốt</a></li>
+                        <li><a class="mnbar-item" href="index.html" onclick="selectMenuItem(this)">Trang chủ</a></li>
+                        <li><a class="mnbar-item" href="product-page.html" onclick="selectMenuItem(this)">Thuốc tốt</a>
+                        </li>
 
                         <li><a class="mnbar-item" href="blog.html" onclick="selectMenuItem(this)">Sống khỏe</a></li>
                         <li><button id="menu-btn" onclick="location.href = '#reservation'">Đặt thuốc</button></li>
@@ -88,7 +89,8 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-3 col-s-12 padding-form main-div" style="float: left; margin-left: 175px;">
+                <div class="col-3 col-s-12 padding-form main-div"
+                    >
                     <div id="km">
                         <p>Mã khuyến mại</p>
                         <a href="#">Chọn mã</a>
@@ -124,26 +126,56 @@
                     </div> -->
                     <div class="row pay">
                         <div class="col-12 col-s-12" style="text-align: left;">
-                            <button id="btn-pay" onclick="DatHang()">ĐẶT HÀNG</button>
+                            <button id="btn-pay" style="width: 100%;" onclick="DatHang()">ĐẶT HÀNG</button>
                         </div>
                     </div>
 
                 </div>
             </div>
             <div class="row">
-                <div class="col-4 col-s-12 padding-form">
+                <div class="col-4 col-s-12 padding-form checkout-methods">
                     <div class="title">PHƯƠNG THỨC THANH TOÁN</div>
                     <div class="radio-item">
 
                         <input name="radio" id="radio1" type="radio"><label for="radio1">Thanh toán khi nhận
                             hàng</label>
                     </div>
-                    <div class="radio-item"><input name="radio" id="radio2" type="radio"><label
-                            for="radio2">Momo</label></div>
+                    <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">Thanh toán
+                            tại cửa hàng gần nhất</label></div>
                     <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">Viettel
                             Money</label></div>
-                    <div class="radio-item"><input name="radio" id="radio4" type="radio"><label for="radio4">Thẻ tín
+                    <div class="radio-item" onclick="OpenCardInfo()"><input name="radio" id="radio4" type="radio"><label
+                            for="radio4">Thẻ tín
                             dụng</label></div>
+                </div>
+
+
+                <div class="col-4 col-s-12 padding-form check-out-card">
+                    <!-- <h1>Payment details</h1> -->
+                    <div id="mastercard">
+                        <img src="img/visa-logo-800x450.jpg" style="height: 70px; float: left;">
+                        <img src="img/mastercard_logo.jpg" style="height: 70px; float: right;">
+                    </div>
+                    <label for="name">Tên chủ thẻ</label>
+                    <input type="text" id="name" name="name" placeholder="Name" />
+                    <br>
+                    <label for="card">Số thẻ</label>
+                    <input type="text" minlength="16" maxlength="16" id="card" name="card"
+                        placeholder="0000 0000 0000 0000" />
+                    <br>
+                    <div class="exp-cvc">
+                        <div class="expiration">
+                            <label for="expiry">Ngày hết hạn</label>
+                            <input class="inputCard" name="expiry" id="expiry" type="text" required
+                                placeholder="00/00" />
+                            <br>
+                        </div>
+                        <div class="security">
+                            <label for="cvc">Mã bảo mật</label>
+                            <input type="text" minlength="3" maxlength="4" id="cvc" name="cvc" placeholder="XXX" />
+                            <br>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -152,12 +184,38 @@
     </section>
     <script>
         $(document).ready(function () {
-        
+
             var cartTotal = sessionStorage.getItem("cartTotal");
             $("#subtotal").text(cartTotal.toString() + ".000 đ");
             var total = parseInt(cartTotal) + 30;
             $("#total").text(total.toString() + ".000 đ");
         });
+        function DatHang() {
+            var hoTen = document.getElementById('txt_hoten').value;
+            var soDienThoai = document.getElementById('txt_sdt').value;
+            var diaChi = document.getElementById('txt_diachi').value;
+
+            if (hoTen == '' || soDienThoai == '' || diaChi == '') {
+                alert('Vui lòng điền đầy đủ thông tin bắt buộc.');
+                return false;
+            }
+            else {
+
+                var phoneNumberPattern = /^\d{10}$/; // Regex check phonenumber...
+                if (!phoneNumberPattern.test(soDienThoai)) {
+                    alert('Số điện thoại không hợp lệ! Vui lòng kiểm tra lại.');
+                    return false;
+                } else {
+                    alert('Thanh toán thành công!');
+                    return true;
+                }
+            }
+        }
+
+        function OpenCardInfo() {
+            var card = document.querySelector('.check-out-card');
+            card.style.display = 'flex';
+        }
     </script>
 </body>
 
