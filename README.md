@@ -1,1 +1,1 @@
-This project is a static website design for MediLife Healthcare, a pharmaceutical company that provides health advice and global healthcare support. The website is designed using HTML, CSS, jQuery, and JavaScript. You can download and edit the code using VS Code or Notepad++. To run the website, I recommend to use the Chrome browser.
+.test
